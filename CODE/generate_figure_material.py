@@ -237,7 +237,7 @@ def figure4():
     Y = []
     qual = []
 
-    if False:
+    if True:
         for a in os.listdir(dirr):
             b = os.path.join(dirr,a);
 
@@ -278,7 +278,7 @@ def figure4():
         pylab.savefig('figure4.png')
 	pylab.show()
     
-    if True:
+    if False:
 
        fname= '/home/jan/Doc/Papers/fast_inh_paper/DATA/GCAL_EI_II/exc_inh_strength=3.5_inh_inh_strength=0.2'
        f = open(fname+'/results.pickle') 
@@ -372,7 +372,7 @@ def figure5():
             sheet_size = numpy.sqrt(len(mmap))
             mmap = numpy.resize(mmap,(sheet_size,sheet_size))
             # lets find out the pinwheel density
-            mmap = mmap[:-1,:-1]
+            mmap = mmap[8:-9,8:-9]
             X.append(abs(float(a.split('_')[5])))
             maps[X[-1]] = mmap
             rho = pinwheel_analysis(mmap)['metadata']['rho']
@@ -393,7 +393,7 @@ def figure5():
         #cax = divider.append_axes("right", size="5%", pad=0.05)
         #pylab.colorbar(im,cax=cax)
         #pylab.colorbar()
-        pylab.savefig('figure5.png')
+        pylab.savefig('figure5.png',dpi=600)
         
         vis(maps[0.001])
         rho = pinwheel_analysis(maps[0.001])['metadata']['rho']
@@ -509,9 +509,8 @@ def a():
 
 
 #figure2()
-figure3()
-#figure4()
+#figure3()
+figure4()
 #a()
-
 #figure5()
 

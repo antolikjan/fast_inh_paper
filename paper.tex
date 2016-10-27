@@ -1,0 +1,323 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{fullpage}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{insval}
+\usepackage{natbib}
+
+
+\title{Fast inhibitory loop explains functional map development with short-range inhibition.}
+\author{J\'an Antol\'ik, Andrew P. Davison}
+
+\begin{document}
+ \maketitle
+\loadkeyvaluestore{/home/jan/Doc/Papers/lsv1m-paper/key_value_store.py}
+
+
+\section{Introduction}
+
+Competition between populations of neurons has been proposed as one of the canonical computations of cortical 
+networks, and has been hypothesized to underly range of brain functions including working memory \cite{Amit1995,Durstewitz2000},
+orientation tuning \cite{Somers1995,Ben-Yishai1995}, and functional map development \cite{VonderMalsburg1973,Antolik2011}.
+In developmental models of functional cortical organization the competition occurs between populations of neurons spatially offset 
+along the cortical surface, and previous studies have shown that a specific arrangement of the effective inhibitory and excitatory 
+interactions is required: inhibition has to have longer range than excitation (a so called Mexican-Hat profile) \cite{Muir2014,?}.
+This is, however, in stark contrast to the know anatomical findings showing that it is the excitatory neurons that tend to form 
+long-range arborizations spanning multiple columns while the axons of majority of inhibitory neurons are confined to area
+only several hundreds of micrometers in diameter.
+
+
+As pointed out by Muir et al. in their recent study \cite{Muir2014}, all previous models of ??? have either relied on the anatomically 
+unsupported Mexican-hat profile of lateral interactions \cite{?,?}, or relied on other biologically unrealistic properties, such as  ... .
+Furthermore, model analysis by Muir et al \cite{Muir2014} showed that the presence of competition across the cortical surface 
+is predicted well by the anatomy of direct excitatory and inhibitory coupling and that multisynaptic network effects are negligible.	
+In conclusion, currently no satisfactory explanation of how topological functional organization develops in cortical networks 
+that is consistent with the present anatomical findings exists. 
+
+All previous models of ??? have either assumed instantaneous synaptic transmission \cite{?,?} or uniform transmission delays
+across the different intra-cortical connections \cite{?,?}. This is also the case of the analysis performed by Muir et al. \cite{?}
+which questions the ability of intra-cortical connections to explain cortical competition. However, a recent study by ? et al. \cite{?}
+have revealed a specific pattern of transmission delays between different neural type combinations. Specifically they found that the
+excitatory to excitatory connections are slow while the excitatory to inhibitory connections are fast. In this study we explore the 
+possibility that this specific transmission delay pattern is the missing link that can explain how short range inhibition can lead 
+to effective cortical competition. We employ computational models to show that the fast inhibitory loop allows for the disynptic
+inhibition to be effective and consequently provides the effective Mexican-hat like lateral interactions, thus for the first time 
+explaining the development of functional organization in cortex with no biologically implausible assumptions. To demonstrate the
+proposed properties, in this study we focus on models of development of orientation maps, because this is the most well explored
+example of competition driven functional cortical organization development, but these results generalize to development of other
+cortical topological properties, as well as potentially other competition based computations.
+
+
+\section{Materials and Methods}
+
+Here we describe the two models and their variants used in this study and finish with description of a measure
+for assessing the extent to which a model orientation maps resamble their biological counterparts. Since this study heavily leans on methodology 
+developed in our previous studies, we offer here only shortened description and refer readers to the original articles for details.
+
+\subsection{GCAL model}
+
+In section ? through ? we use GCAL model \cite{Stevens2013}  which is a recently developed variant of LISSOM 
+(Laterally Interconnected Synergetically Self-Organizing Map) algorithm introduced by Miikkulainen et al. \cite{CMVC}, 
+which itself is based on earlier Self-Organizing Map models \cite{Kohonen1982}.
+
+For clarity and consistency the following model description closely follows the methodoly sections in our 
+previous work \cite{Stevens2013,Antolik2011}. The architecture of the 3 GCAL variants presented in this 
+paper is depicted in figure \ref{?}. The models are implemented in the Topographica simulator, freely available at www.topographica.org. 
+Each of the GCAL models consists of set of sheets of model neural units,
+corresponding to: (1) the photoreceptors, (2) the combined effects of the retinal ganglion cells (RGC) and ON and OFF LGN cells.
+Furthermore each model has one V1 sheet of units with direct excitatory and inhibitory interactions, or two 
+V1 sheets, one corresponding to excitatory and one to inhibitory neurons.
+The model sheet is a 2D array of computational elements (called units or, loosely, neurons), with activation and plasticity equations as described below
+and referenced by a coordinate system we will refer to as sheet coordinates, where the center of the sheet is designated (0.0,0.0).  
+The number of units simulated in each sheet is determined by the density of units per unit length in both sheet dimensions. 
+All cortical sheets have nominal dimensions \insval{cortex_size}$\times$\insval{cortex_size} in sheet coordinates. The sizes of the
+RGC/LGN (\insval{lgn_size}$\times$\insval{lgn_size}) and photoreceptor (\insval{visual_field_size}$\times$\insval{visual_field_size}) sheets
+were chosen to ensure that each unit in the receiving sheet has a complete set of connections, thus minimizing edge effects in the
+RGC/LGN and V1 sheets. The density of units per $1.0\times$1.0 area is \insval{cortex_density}$\times$\insval{cortex_density} 
+for the photoreceptor and RGC/LGN ON and OFF sheets, and \insval{cortex_density}$\times$\insval{cortex_density} for both cortical sheets.
+
+\subsection{Simulation run-time and stimuly}
+
+The simulator operates in discrete time steps. Retinal input changes every \insval{settle_steps} time steps (and during this period is kept constant), and
+therefore afferent inputs to the V1 sheet(s) are effectively updated every 20 steps. This process is a discrete simulation of an
+otherwise continuous series of changes in membrane potential due to incoming spikes and consequent generation of spikes.
+
+The activation value $\psi_{i}$ of unit i in the photoreceptor sheet (P) is given by the gray-scale value in the chosen image at that point.
+In this study we use two-dimensional elongated Gaussian patterns, who's center coordinates and orientation is sampled from uniform 
+distribution that covers the area of photoreceptor sheet and full range of orientations. Each 20 time steps \insval Gaussian patterns are superimposed
+to form the visual input.
+
+\subsection{The LGN/RGC ON and OFF sheets}
+
+
+
+\subsection{Rate model}
+
+\subsection{Orientation map quality measure}
+
+In order to asses whether the proposed model develops orientation maps that match the structure of those found in real 
+animals we need to utilize an automatic metric that tells how close the maps are to animal data. To this end we will 
+utilize a map-quality metric that we have recently developed \cite{Stevens2013} based on the empirical observation that pinwheel count 
+in biological orientation maps scales linearly with hypercolumn size across many different species \cite{Kaschube2010}.
+Specifically the pinwheel density per hypercolumn area (\Lambda^2) converges to \pi, when averaged across sufficently 
+large cortical surface. For a detailed description of the procedure for calculating this metric we refer reader to 
+our previous work \cite{Stevens2013} but briefly its calculation involves three steps. First, the locations of the pinwheels
+in the orientation map are detrmined as the intersections of the zero contours of the real and imaginary 
+components in the polar representation of the maps, thus yielding the total pinwheel count in the map. Second the 
+hypercolumn size is determined as the peak in the isotropic ring-like fourier transform of the orientation maps.
+Third, using these two number we can derive the pinwheel density, but to transform it to a usefull metric between 
+unity (high-quality map) and zero (low quality map) we pass it through normalized gama distribution. In order to 
+avoid any edge effects contaminating this measure, only the central ?x? area of the orientation maps is analyzed for
+all models presented here. We have shown that this matric reliably distinguishes low and high quality maps \cite{Stevens2013}
+and is a valid measure for assessing how well the model orientation maps match animal data.
+
+\section{Results}
+
+In this article we will proceed through multiple gradually more complex models of orientation development to address several key questions,
+eventually demonstrating that the experimentally identified fast inhibitory loop is a satisfactory explanation for how short-range 
+inhibition can support development of cortical functional organization. We will use two different computational abstractions 
+to explore the questions at hand. In the fist part of the study we will use computational model that is derived from the LISSOM 
+family of models \cite{CMVC}. This choice has three advantages. It allows for a very straightforward explanation of why 
+fast inhibitory loop enables short-range inhibition to induce competition. It makes our explanation directly comparable to the 
+extensive set of published LISSOM family models, and thus demonstrates that the solution proposed here generalizes to range of other 
+functional properties. And finally the LISSOM abstraction enables very fast simulations, thus allowing us to perform 
+parameter search analysis that would be otherwise computationally prohibitive. However, as we will explain in ?, some simplifications
+made by the LISSOM abstraction, specifically the instantaneous translation of the neuronal input into it's activity, will leave 
+certain questions unanswered. These will be addressed in section ? using more detailed rate model framework.
+
+
+\section{Fast excitatory to inhibitory to excitatory loop enables competition in networks with short-range inhibitory connections.}
+
+? et al. have shown that transmition delays between different types of cortical neurons are not uniform, specifically they found that transmission delays 
+between excitatory neurons are ? ms, from excitatory to inhibitory neurons are ? ms, from inhibitory to excitatory neurons are ?. The sample size for connections
+between inhibitory cells in the study was not large enough to be quantitatively reliable. The key observation here is that the 
+combined di-synaptic delay from excitatory to inhibitory and inhibitory to excitatory cells is approximately as long as the mono-synaptic delay
+of the excitatory to excitatory connections. Drawing from this, the core insight of this study is that under such pattern of delays
+the effective inhibitory interactions are well approximated by the convolution of the excitatory and inhibitory connection kernels, thus 
+giving the effective inhibition longer range, consequently fulfilling the essential requirement for cortical competition to occur.
+
+For didactic purposes, let us first explore one example set of conditions under which the above statement holds exactly: 
+
+\begin{enumerate}
+
+\item The sum of the excitatory to inhibitory , and inhibitory to excitatory delays is exactly the same as the excitatory to excitatory delay
+\item There is no inhibitory to inhibitory interaction
+\item The synaptic inputs into the excitatory and inhibitory neurons are instantaneously translated into their rate response via positive rectified transfer function.
+\item The connection kernels of all neurons are Gaussian kernels with spatial constant $\sigma_{e}$ for excitatory neurons and $\sigma_{i}$ for inhibitory neurons.
+\item We will disregard long-range (excitatory) connectivity, and assume that both local excitatory and local inhibitory connections have the same extent , thus $\sigma_{e} = \sigma_{i}$ 
+\end{enumerate}
+
+These conditions lead to following set of equations governing the cortico-cortical interaction.
+\begin{align}
+\label{eqn:first}
+\begin{split}
+& C_{m} \frac{dV}{dt} = \frac{(V_{rest} - V)}{R_{m}} + \frac{}{{R_{m}}}           g_{ex}(E_{ex} - V) + g_{inh}(E_{inh} - V)  \\
+
+
+& R_{i}(x,t) = [\sum_{y}N_{\sigma_{e}}(\lVert y-x \rVert)R_{e}(y,t-\theta)]^+
+\end{split}
+\end{align}
+
+\noindent where $R_{p}(x,t)$ is the response of neuron of type $p$ located at position $x$ at time $t$, $I_{aff}(x,t)$ is the afferent input to neuron $x$ at time $t$, $N_{\sigma}$(d) 
+is normal distribution of variance $\sigma$, corresponding to the lateral connection kernel. When we expand for $R_{i}$ we obtain:
+
+\begin{equation}
+R_{e}(x,t) = [\sum_{y}N_{\sigma_{e}}(\lVert y-x \rVert)R_{e}(y,t-\alpha) - \sum_{y}N_{\sigma_{i}}(\lVert y-x \rVert)[\sum_{z}N_{\sigma_{e}}(\lVert z-y \rVert)R_{e}(z,t-\theta-\beta)]^+]^+
+\end{equation}
+
+
+\noindent Because $\theta + \beta = \alpha$ (assumption 1) and because the inhibitory neurons receive only excitatory connections (assumption ?) we can further simplify the above as:
+
+
+\begin{equation}
+R_{e}(x,t) = [\sum_{y}N_{\sigma_{e}}(\lVert y-x \rVert)R_{e}(y,t-\alpha) - \sum_{z}\sum_{y}N_{\sigma_{i}}(\lVert y-x \rVert) N_{\sigma_{e}}(\lVert z-y \rVert) R_{e}(z,t-\alpha)]^+
+\end{equation}
+
+\noindent and thus due to symmetry of normal distribution:
+
+\begin{equation}
+R_{e}(x,t) = [\sum_{y}N_{\sigma_{e}}(\lVert y-x \rVert)R_{e}(y,t-\alpha) - \sum_{z}N_{\sigma_{i}} \ast  N_{\sigma_{e}}(\lVert z-x \rVert) R_{e}(z,t-\alpha)]^+ 
+\end{equation}
+
+\noindent Because convolution of two Normal distributions of variance $\sigma_{i}$  and $\sigma_{e}$ is normal distribution with variance $\sqrt{\sigma_{i}^2 + \sigma_{e}^2}$ and 
+because $\sigma_{i} = \sigma_{e}$ we can simplify to:
+
+\begin{equation}
+R_{e}(x,t) = [\sum_{y}N_{\sigma_{e}}(\lVert y-x \rVert)R_{e}(y,t-\alpha) - \sum_{z}N_{\sqrt{2}\sigma_{e}}(\lVert z-x \rVert) R_{e}(z,t-\alpha)]^+
+\end{equation}
+
+This shows that under these specific assumptions the effective inhibitory interactions between excitatory neurons are $\sqrt{2}$ longer than excitatory and thus
+follow the mexican-hat like profile required for for lateral cortical competition underlying functional map development. Even though this essential condition of 
+cortical competition is fulfilled in this model configuration, the requirement of local inhibition puts important constraints on the extent of the effective lateral
+interactions (relative to lateral excitation). It thus remains unclear wether development of high-quality orientation maps as observed experimentally is 
+supported under these conditions. Conveniently, the lateral interaction in the LISSOM family of models is governed by the same equations as ? and ?. 
+In the following we will use the GCAL model \cite{?}, the latest and most robust addition to the LISSOM family of models to demonstrate that the above 
+specific configuration of effective lateral excitation and inhibition permits development of high-quality orientation maps. To facilitate comparison we will use exactly 
+the same model configuration as in ?, except to three modifications necessitated by the analysis above:
+
+\begin{enumerate}
+
+\item We will change the spread of lateral inhibition to be $\sqrt{2}$ longer than lateral excitatory spread, such that the resulting lateral
+interactions conform with equation ?.
+
+\item The change in point ? will results in change in the balance of overall excitation and inhibition in the model which is critical 
+to correction functional development in the model. We will thus modify the strength of the lateral inhibition to compensate for changes in ?.
+
+\item Analogously to ?, the changes in ? change the overall balance between feedforward and lateral contributions to model cortical neuron's activity, 
+which we will compensate by changing the overall strength of the lateral interactions.
+
+\end{enumerate} 
+
+\begin{figure}[htpb!] 
+\centering
+\includegraphics[width=16cm]{./SVG/Figure1/figure1.png}
+\caption{Orientation map development with short range inhibition and fast excitatory-to-inhibitory-to-excitatory loop. (A) Map quality (see Materials and Methods) at a range of 
+lateral excitatory vs inhibitory projection strength ratios and afferent vs lateral projection strength ratios. (B-D) Functional organization in 3 example parameter configurations 
+indicated by the red marks. From left to right, the orientation map, fast-fourier transform of the orientation map and afferent connection fields from the ON LGN model sheet for 25 example model V1 neurons. 
+(B-C) Two examples of sub-optimal orientation maps. (D) Model configuration with the highest quality map found in this parameter search. (E) The same model configuration but in this case ran with explicit
+simulation of inhibitory neurons and corresponding connections. E and D are identical confirming correctnes of our analysis.}
+\label{fig:figure1}
+\end{figure} 
+
+
+In order to find working combination of parameters in point's 2 and 3, and also to show that the model is robust to certain level of changes
+in these two parameters we have performed a parameter search across these two parameters and evaluated the quality of the orientation map (see ?) for each 
+parameter combination. As figure ? shows, under a range of values of both parameters the model develops high-quality orientation maps indistinguishable
+from their experimental counterparts, thus concluding our first step towards showing that fast excitatory-to-inhibitory-to-excitatory loop can explain 
+how short-range inhibition can induce cortical competition and consequently development of topological organization of functional properties.
+
+Furthermore, note that the GCAL model used in figure ? only explicitly models excitatory neurons and assumes both direct excitatory and inhibitory
+interactions between them, thus corresponding to equation ?. Even though above we have shown that equation ? is equivalent to equation ? to verify 
+correctness of our analysis we have ran a single simulation of the GCAL model corresponding to the parameter combination with the highest map 
+quality found in figure ?, but with explicitly simulated inhibitory population. In this model we thus do not model direct inhibitory interactions
+between excitatory neurons, but instead add excitatory to inhibitory and inhibitory to excitatory connections of the same extend as those of 
+excitatory to excitatory (see the assumption \#?). As we have shown above this model should be mathematically equivalent to the simulations 
+figure ?D, whic is confirmed in figure ?E that shows that the simulation results in formation of identical orientation map as in the figure ?D.
+
+
+
+\section{Inhibitory to inhibitory connections are consistent with development of functional organization}
+
+In the previous section we have shown that under a set of specific assumptions short-range inhibition can induce 
+effective mexican-hat like interaction and thus support development of orientation maps. However not all assumptions we 
+made were in line with experimental evidence. In this section we will show that one of these assumptions is not necessary, 
+specifically that addition of inhibitory connections does not invalidate results of the previous section. 
+
+To this end we will use the exact GCAL model configuration that we have found in previous section to posses the highest
+quality orientation map (see figure ?). We will use GCAL configuration in which we will explicitly model the inhibitory neurons
+(see figure ?, and equation ?) and consequently also explicitly the excitatory to inhibitory and inhibitory to excitatory connections.
+Furthermore, we will add inhibitory to inhibitory connections to the model with the same extent as that of inhibitory to excitatory
+connections ($\sigma_{i} = \sigma_{e}$ in eq ?). 
+
+\begin{figure}[htpb!] 
+\centering
+\includegraphics[width=16cm]{./SVG/Figure2/figure2.png}
+\caption{Orientation map development with short range inhibition, fast excitatory-to-inhibitory-to-excitatory loop and inhibitory to inhibitory connections. (A) Map quality (see Materials and Methods) at a range of 
+inhibitory to inhibitory vs inhibitory to excitatory projection strength ratios and excitatory to inhibitory connection strengths. (B-D) Functional organization in 3 example parameter configurations 
+indicated by the red marks. From left to right, the orientation map, fast-fourier transform of the orientation map and afferent connection fields from the ON LGN model sheet for 25 example model V1 neurons. }
+\label{fig:figure2}
+\end{figure} 
+
+
+By explicitly modelling the inhibitory neurons in this model we have replaced a single parameter gowerning the strength of inhibitory
+later interactions in the model from previous section with three new parameters that set the strength of excitatory to inhibitory,
+inhibitory to excitatory and inhibitory to inhibitory connections (all other parameters remaind the same as the 
+in the best parametrization found in previous section). Note that in principle there is redundancy in these parameters as
+the overall strength of the projections from inhibitory neurons onto both excitatory and inhibitory populations is scaled by the 
+excitatory to inhibitory projections strength. Therefore in figure ? we have systematically varied the strength of the added inhibitory to inhibitory
+projection expressed relatively to the strength of the inhibitory to inhibitory connections (which was set to 1), while also varying the 
+strength of the excitatory to inhibitory projection. We have  investigated the quality of the orientation 
+maps that developed under these different levels of inhibitory to inhibitory interactions. As can be seen, high quality maps 
+can develop under the full range of the inhibitory to inhibitory interaction strengths, depending on the overall 
+excitatory to inhibitory drive. This shows that inclusion of direct inhibitory to inhibitory interactions does not 
+invalidate the results of section ?.
+
+\section{Long-range excitation}
+
+In section ? we have only assumed local connectivity by assuming that both excitatory and inhibitory interaction had the same spatial extent. 
+However experimental evidence shows that excitatory cells send longer connections compared to inhibitory cells \cite{?}. In this section we will
+explore what happens if we add long-range excitatory connectivity into the model analyzed in section ?. Buz\'as et al. \cite{Buzas2006} have shown that
+the lateral connectivity in layer 2/3 can be best described as superimposition of two gabor connectivity likelyhoods, one short-range not orientation specific
+and one long-range orientation specific. Here we will assume such dual structure, leading us to add second excitatory to excitatory and excitatory to inhibitory
+projection into the model described in section ?, but with 3 times larger space constant (in line with Buz\'as et al. quantitative findings). In figure \ref{fig:figure3} we have 
+kept the overall strength of excitatory to excitatory and excitatory to inhibitory pathways the same, corresponding to the best parametrization found in ?,
+but varied the relative strength between the short range and long range components. As can be seen ...
+
+\begin{figure}[htpb!] 
+\centering
+\includegraphics[width=16cm]{./SVG/Figure2/figure3.png}
+\caption{}
+\label{fig:figure3}
+\end{figure} 
+
+\section{Non-equal effective excitatory and inhibitory delay}
+
+In all model variants examined sofar we have made the key assumption that the delay on the excitatory to excitatory connections is exactly equal 
+to the sum of excitatory to inhibitory and inhibitory to excitatory delays. This assumption is approximately supported by the experimental evidence \cite{?}, 
+but we cannot assume it holds exactly in real biological substrate.  However, we hypothesize, that the small discrepancies between the cumulative delays 
+of the mono-synaptic excitatory and duo?-synaptic inhibitory interactions can be absorbed in the membrane time-constant of the neurons. In this section we will 
+verify this hypothesis by extending the modeling framework used thus far with a finite membrane time-constant (see Materials and Methods ?) and proceed to determine 
+the magnitude of discrepancy in the delays between the excitatory and inhibitory interactions that can be managed by the model without impairing the resulting map orientation 
+map quality. We use model parametrization similar to those determined in previous section ? to lead to high quality orientation maps. For simplicity and computational 
+efficiency we omit the inhibitory to inhibitory and long-range excitatory connections that have already been investigated above. The membrane time-constant of excitatory 
+neurons was set to ?ms while those of inhibitory neurons to ?ms. This faster inhibitory dynamics are necessary to prevent oscillations in the system \cite{?}. 
+Figure ? shows the resulting orientation maps and associated map quality measures of ? models with range of differences between the monosynaptic excitatory and 
+duo?-synaptic inhibitory interactions. 
+ 
+\begin{figure}[htpb!] 
+\centering
+\includegraphics[width=16cm]{./SVG/Figure4/figure4.png}
+\caption{}
+\label{fig:figure3}
+\end{figure} 
+
+
+
+\bibliographystyle{abbrv}
+\bibliography{./mendeley}
+
+\end{document}
+
+
+
