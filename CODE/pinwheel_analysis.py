@@ -202,6 +202,46 @@ def identify_pinwheels(re_contours,  im_contours, intersections):
 ## Hypercolumn distance estimation #
 #==================================#
 
+def azimuthalAverage(image, center=None):
+    """
+    Calculate the azimuthally averaged radial profile.
+
+    image - The 2D image
+    center - The [x,y] pixel coordinates used as the center. The default is 
+             None, which then uses the center of the image (including 
+             fracitonal pixels).
+    
+    """
+    import numpy as np
+    # Calculate the indices from the image
+    y, x = np.indices(image.shape)
+
+    if not center:
+        center = np.array([(x.max()-x.min())/2.0, (x.max()-x.min())/2.0])
+
+    r = np.hypot(x - center[0], y - center[1])
+
+    # Get sorted radii
+    ind = np.argsort(r.flat)
+    r_sorted = r.flat[ind]
+    i_sorted = image.flat[ind]
+
+    # Get the integer part of the radii (bin size = 1)
+    r_int = r_sorted.astype(int)
+
+    # Find all pixels that fall within each radial bin.
+    deltar = r_int[1:] - r_int[:-1]  # Assumes all radii represented
+    rind = np.where(deltar)[0]       # location of changed radius
+    nr = rind[1:] - rind[:-1]        # number of radius bin
+    
+    # Cumulative sum to figure out sums for each radius bin
+    csim = np.cumsum(i_sorted, dtype=float)
+    tbin = csim[rind[1:]] - csim[rind[:-1]]
+
+    radial_prof = tbin / nr
+
+    return radial_prof
+
 # For featuremapper.analysis
 
 # - Crop to smallest dimension, assume FFT ring in center
@@ -267,38 +307,56 @@ def hypercolumn_distance(preference, init_fit=[0.35,3,1.3,0.15,-0.003,0]):
     the analysed values in a dictionary.
     """
     fft_spectrum = power_spectrum(preference)
-    amplitudes = wavenumber_spectrum(fft_spectrum)
-    ks = np.array(range(len(amplitudes)))
-    
+    amplitudes = np.array(azimuthalAverage(1-fft_spectrum))
+    #amplitudes = np.array(wavenumber_spectrum(fft_spectrum))
+    ks = np.array(range(len(amplitudes)))#[1:]
+    amplitudes = amplitudes#[1:]
 
 
     err = 100000000000
     valid_fit = False
-    for i in xrange(0,30):
+    for i in xrange(0,20):
         try:
 	    init_fit[1] = float(i)
             fit_valst, _ = curve_fit(KaschubeFit, ks, np.array(amplitudes),init_fit, maxfev=10000)
 	    fit = dict(zip(['a0','a1','a2','a3','a4','a5'], fit_valst))
-     	    valid_fitt = (fit['a1'] > 0 and fit['a0'] > 0)
-	    fit_err =  np.sum(np.power(KaschubeFit(ks,fit_valst[0],fit_valst[1],fit_valst[2],fit_valst[3],fit_valst[4],fit_valst[5])-np.array(amplitudes),2))
+	    fit_err =  np.sum(abs(KaschubeFit(ks,fit_valst[0],fit_valst[1],fit_valst[2],fit_valst[3],fit_valst[4],fit_valst[5])-np.array(amplitudes)))
 	    print "peak: " , fit['a1'] , "error: " ,fit_err
-	    if valid_fitt and err > fit_err:
+	    print "height: ", fit['a0']
+	    print "width: ", fit['a2']
+	    if err > fit_err:
 		fit_vals = fit_valst.copy()
 		err = fit_err
 		valid_fit=True
         except RuntimeError:
 	    pass
     
-    #print "picked peak:", fit_vals[1]
-    #import pylab
-    #pylab.plot(np.array(amplitudes))
-    #pylab.plot(KaschubeFit(ks,fit_vals[0],fit_vals[1],fit_vals[2],fit_vals[3],fit_vals[4],fit_vals[5]))
+    
+
+    print "picked peak:", fit_vals[1]
+    import pylab
+    pylab.figure()
+    pylab.plot(np.array(amplitudes))
+    pylab.plot(KaschubeFit(ks,fit_vals[0],fit_vals[1],fit_vals[2],fit_vals[3],fit_vals[4],fit_vals[5]))
 
     if valid_fit:
         fit = dict(zip(['a0','a1','a2','a3','a4','a5'], fit_vals))
+    
+    if (fit['a1'] <= 2) or (fit['a0'] < 0):
+       valid_fit = False;
+    
+
+    print KaschubeFit(ks[0],fit['a0'],fit['a1'],fit['a2'],fit['a3'],fit['a4'],fit['a5'])
+    print KaschubeFit(fit['a1'],fit['a0'],fit['a1'],fit['a2'],fit['a3'],fit['a4'],fit['a5'])
+    if KaschubeFit(ks[0],fit['a0'],fit['a1'],fit['a2'],fit['a3'],fit['a4'],fit['a5'])*1.05 >= KaschubeFit(fit['a1'],fit['a0'],fit['a1'],fit['a2'],fit['a3'],fit['a4'],fit['a5']):
+       valid_fit = False;	    
+
+    
 
     kmax_argmax = np.argmax(amplitudes[1:]) + 1
     kmax = fit['a1']+1 if valid_fit else 1000 #float(kmax_argmax)
+    #kmax = np.argmax(amplitudes)+1
+
 
     print "KMAX", kmax
 
@@ -322,7 +380,7 @@ def pinwheel_analysis(mmap):
     get the estimated value of kmax to compute the pinwheel density.
     """
     preference = mmap
-    preference = preference #* np.pi
+    #preference = preference * np.pi
     #preference = preference[10:37,10:37]
     #preference = preference[0:47,0:47]
     polar_map = polar_preference(preference)

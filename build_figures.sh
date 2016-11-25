@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for x in ./SVG/Figure1/figure1.svg  ./SVG/Figure2/figure2.svg 
+for x in ./SVG/Figure1/figure1.svg  ./SVG/Figure2/figure2.svg ./SVG/Figure3/figure3.svg  ./SVG/Figure4/figure4.svg 
   do
   dir=`dirname $x`
   base=`basename $x .svg`
