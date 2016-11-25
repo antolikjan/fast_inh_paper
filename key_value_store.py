@@ -25,5 +25,10 @@
 	'learning_rate' : ?,
 
 
+	# time constant Model
+	'membrane_time_constant_E' : ?,
+	'membrane_time_constant_I' : ?,
+
+
 
 }
