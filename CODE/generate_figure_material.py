@@ -36,7 +36,7 @@ def figure2():
     Y = []
     qual = []
     
-    if True:
+    if False:
         for a in os.listdir(dirr):
             b = os.path.join(dirr,a);
 
@@ -106,7 +106,7 @@ def figure2():
        fig.add_axes(ax)
        ax.imshow(power_spectrum(d['orprefmap'][61:-60,61:-60]),interpolation='none',cmap='gray',aspect='normal')
        pylab.savefig('/home/jan/Doc/Papers/fast_inh_paper/SVG/Figure1/generated_data/fft_map2.png',  pad_inches=0)
-       
+
 
        load_snapshot('/home/jan/Doc/Papers/fast_inh_paper/DATA/GCAL_SHORTRANGE/lat_strength_ratio=2.6_exc_inh_ratio=0.8/snapshot.typ')
        save_plotgroup("Projection",projection=topo.sim["V1"].projections().values()[0],density=1.5,saver_params={'filename_prefix' : '2'})
@@ -129,7 +129,27 @@ def figure2():
      
        load_snapshot('/home/jan/Doc/Papers/fast_inh_paper/DATA/GCAL_SHORTRANGE/lat_strength_ratio=2.8_exc_inh_ratio=0.65/results.pickle')
        save_plotgroup("Projection",projection=topo.sim["V1"].projections().values()[0],density=1.5,saver_params={'filename_prefix' : '1'})
+
+    if True:
+       load_snapshot('/home/jan/projects/topographica/GCAL_EI/a-p_exc_strength=3.3_-p_inh_strength=2.805/snapshot.typ')
+       mmap = topo.sim["V1"].sheet_views["OrientationPreference"].view()[0]
+
+       fig = pylab.figure(dpi=600,facecolor='w',figsize=(5,5))
+       ax = plt.Axes(fig, [0., 0., 1., 1.])
+       ax.set_axis_off()
+       fig.add_axes(ax)
+       ax.imshow(mmap[61:-60,61:-60],interpolation='none',cmap='hsv',aspect='normal')
+       pylab.savefig('/home/jan/Doc/Papers/fast_inh_paper/SVG/Figure1/generated_data/or_map4.png',  pad_inches=0)
        
+       fig = pylab.figure(dpi=600,facecolor='w',figsize=(5,5))
+       ax = plt.Axes(fig, [0., 0., 1., 1.])
+       ax.set_axis_off()
+       fig.add_axes(ax)
+       ax.imshow(power_spectrum(mmap[61:-60,61:-60]),interpolation='none',cmap='gray',aspect='normal')
+       pylab.savefig('/home/jan/Doc/Papers/fast_inh_paper/SVG/Figure1/generated_data/fft_map4.png',  pad_inches=0)
+     
+       
+       save_plotgroup("Projection",projection=topo.sim["V1"].projections().values()[0],density=1.5,saver_params={'filename_prefix' : '4'})
         
 def figure3():
     dirr = '/home/jan/Doc/Papers/fast_inh_paper/DATA/GCAL_EI_II'
@@ -439,7 +459,7 @@ def figure5():
 
 
 def a():
-    dirr = '/home/jan/Doc/Papers/fast_inh_paper/DATA/GCAL_EI_II_LONGE'
+    dirr = '/home/jan/projects/topographica/GCAL_EI/'
     rhos = {}
     
     X = []
@@ -469,10 +489,10 @@ def a():
 	    pickle.dump(d,f)
             
 
-
-#figure2()
+#a()
+figure2()
 #figure3()
-figure4()
+#figure4()
 #a()
 #figure5()
 
