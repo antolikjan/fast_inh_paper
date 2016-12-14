@@ -1,0 +1,29 @@
+%
+% Defines commands to insert values from external data file based on keys
+%
+% Requires the pythontex package
+%
+
+\NeedsTeXFormat{LaTeX2e}[1994/12/01]
+\ProvidesPackage{insval}[2013/01/21 v0.1 insval]
+\RequirePackage{pythontex}
+
+
+\begin{pycode}
+def loadstore(filename):
+    global d
+    f=open(filename,'r')
+    d = eval(f.read()) 
+    assert type(d)==dict
+\end{pycode}
+
+% This command loads the key value store. It requires single argument with the ABSOLUTE file-path to the store.
+% The file is assumed to contain single python dictionary. Note this command has to used within the {\it document} environment
+
+\newcommand{\loadkeyvaluestore}[1]{\py{loadstore("#1")}}
+
+
+% This command inserts the value found in the value store based on it's single parameter used as a key 
+\newcommand{\insval}[1]{\py{d["#1"]}}
+
+
