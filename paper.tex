@@ -50,12 +50,15 @@ developed in our previous studies, we offer here only shortened description and 
 \begin{figure}[htpb!] 
 \centering
 \includegraphics[width=16cm]{./SVG/FigureModelArchitecture/drawing.png}
-\caption{General model architecture. }
+\caption{General model architecture. (A) Inhibitory cortical population corresponds to a regular lattice of units in cortical space. (B) As in A but 
+for excitatory population. (C) Thalamic neurons are modeled as simple difference-of-Gaussian filter followed by a threshold-linear trasfer function. 
+(D) The intra-cortical connectivity between the excitatory and inhibitory populations and their transmission delays. The intra-cortical connectivity is the only aspect of the general architecture presented here that changes between the diffrent model variants explored in this study and each variant is detail in figure \ref{fig:model_variants}.
+(F) The centers of RFs of the LGN neurons form a regular latice accross the visual space covered by the model. This retinotopic mapping of connection fields between layers of the model is also maintained in the thalamo-cortical projection (lines between D and F)}
 \label{fig:model_architecture}
 \end{figure} 
 
 
-\subsection{GCAL model}
+\subsection{GCAL model}\label{sec:gcal}
 
 In sections \ref{sec:SM1} through \ref{sec:SM3} we use GCAL model \cite{Stevens2013}  which is the most advanced variant of LISSOM 
 (Laterally Interconnected Synergetically Self-Organizing Map) algorithm introduced by Miikkulainen et al. \cite{CMVC}, 
@@ -63,10 +66,8 @@ which itself is based on earlier Self-Organizing Map models \cite{Kohonen1982}.
 
 For clarity and consistency the following model description closely follows the methodology sections in our 
 previous work \cite{Stevens2013,Antolik2011}. The architecture of the 3 GCAL variants presented in this 
-paper is depicted in figure \ref{?}. The models are implemented in the Topographica simulator, freely available at www.topographica.org. 
-Each of the GCAL models consists of set of sheets of model neural units,
-corresponding to: (1) the photoreceptors, (2) the combined effects of the retinal ganglion cells (RGC) and ON and OFF LGN cells.
-Furthermore each model has one V1 sheet of units with direct excitatory and inhibitory interactions (section \ref{sec:SM1}), or two 
+paper is depicted in figure \ref{fig:fig:model_architecture} and figure \ref{model_variants}A-C. The models are implemented in the Topographica simulator, freely available at www.topographica.org. 
+Each of the GCAL models consists of set of sheets of model neural units, corresponding to: (1) the photoreceptors, (2) the combined effects of the retinal ganglion cells (RGC) and ON and OFF LGN cells. Furthermore each model has one V1 sheet of units with direct excitatory and inhibitory interactions (section \ref{sec:SM1}), or two 
 V1 sheets, one corresponding to excitatory and one to inhibitory neurons (sections \ref{sec:SM2} and \ref{sec:SM3}).
 The model sheet is a 2D array of computational elements (called units or, loosely, neurons), with activation and plasticity equations as 
 described below and referenced by a coordinate system we will refer to as sheet coordinates, where the center of the sheet is designated (0.0,0.0).  
@@ -172,14 +173,29 @@ $\beta_{p}=\frac{\iota_{p}}{\upsilon_{p}}$, where $\upsilon_{p}$ is the number o
 \begin{figure}[htpb!] 
 \centering
 \includegraphics[width=16cm]{./SVG/FigureModelVariants/drawing.png}
-\caption{The four considered model variants. }
-\label{fig:model_architecture}
+\caption{The four considered intra-cortical connectivty variants. (A-C) Are modelled using firing rate models of neural units with instantenous 
+translation of inputs into membrane-potential (see section \ref{sec:gcal}). 
+(A) Variant 1, assuming only local equaly wide excitatory and inhibitory connectivity, and ignoring direct inhibitory to inhibitory interactions. (B) Variant 2, as in A but with added direct inhibitory to inhibitory connections of equal extent as the other excitatory and inhibitory projections. (C) Variant 3, as in A but with added long-range excitatory connections represented based on Buz\'as \etal\,\cite{Buzas2006} as a second wider gaussian. (D) The same as A but modelled with neural units that take into account membrane time-cosntant (see section \ref{sec:rate}).
+The transmission delay of the inhibitory to excitatory projections was varied in the experiments presneted in section \ref{sec:SM4}.}
+\label{fig:model_variants}
 \end{figure} 
 
 
-\subsection{Rate model}
+\subsection{Rate model} \label{sec:rate}
+
+The architecture of this model is identical to the GCAL models presented above (see figure \ref{fig:fig:model_architecture}) 
+with the exception of the equation ? describing the neural model which is replaced with equation taking into account the 
+membrane time constant: 
+
+\begin{equation}
+\Psi_{i}(t)= f(\sum_{p}\gamma_{p}C_{ip}(t))
+\end{equation}
+
+As a consequence the evolution of the network dynamics have to be simulated at higher resolution. We chose the update step to be ?ms, and we 
+let the activity in the model to settle for ?ms, thus resulting in ? settling steps as opposed to the \ref{} of the GCAL model.
 
 
+figure \ref{fig:fig:model_architecture} and figure \ref{model_variants}A-C
 
 \subsection{Orientation map analysis}
 
@@ -438,6 +454,9 @@ involved preclude systematic search across the full parameter space, and we have
 that we have not treated in this study is the lack of direct thalamic input onto inhibitory cells. Since inhibitory cells in cortical layer 4 do receive thalamic input \cite{Binzegger2004} the 
 inclusion of external input in the inhibitory population needs to be considered in future.
 
+In this paper we have decided to investigate cortical competitive mechamnisms through the prism of orientation map development. The advantage of this approach is that it allows us not only to show that some form of competition is possible, but also that it is of the form that actually supports implementation of specific cortical computations. 
+Given that we show that our model implements effective Mexican hat lateral interactions (section \ref{sec:SM1}) and these have been in the past shown to be sufficient to explain cortical organization of other functional features (i.e. retinotopy, ocular dominance, spatial frequency and color) it is very likely that our results will generalzie to these other dimensions of sensory input as well. Cortical competition of other forms have been proposed to underly broad variety of other cortical operations, including associative memory, noise suppression, decission making, saliency detection and other forms of attentional computations. Even though additional work will be required to determine if the mechanisms proposed here can generelize to these other neural computations, this study offers 
+promising framework for anatomically plausible mechinistic explanations of these important aspect of brain function.
 
 
 \bibliographystyle{abbrv}
