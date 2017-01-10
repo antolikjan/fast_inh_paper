@@ -27,15 +27,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.979899"
-     inkscape:cx="183.01743"
+     inkscape:cx="386.99142"
      inkscape:cy="835.10779"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1920"
-     inkscape:window-height="1014"
+     inkscape:window-width="1280"
+     inkscape:window-height="751"
      inkscape:window-x="0"
-     inkscape:window-y="27"
+     inkscape:window-y="1"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata7">
@@ -54,14 +54,14 @@
      inkscape:groupmode="layer"
      id="layer1">
     <image
-       sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/SVG/Figure2/./generated_data/figure2.png"
+       sodipodi:absref="/Users/jan/Documents/doc/Papers/fast_inh_paper/SVG/Figure2/./generated_data/figure2.png"
        xlink:href="./generated_data/figure2.png"
-       y="12.746113"
-       x="40.198555"
-       id="image3494"
-       preserveAspectRatio="none"
+       width="331.42856"
        height="331.42856"
-       width="331.42856" />
+       preserveAspectRatio="none"
+       id="image3494"
+       x="40.198555"
+       y="12.746113" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#ff0000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 276.51477,260.9426 c 36.37421,18.9244 8.77233,22.96644 133.57273,15.44071"
@@ -116,32 +116,32 @@
          x="160.4696"
          y="77.828957">map quality</tspan></text>
     <image
-       sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/SVG/Figure2/generated_data/or_map1.png"
+       sodipodi:absref="/Users/jan/Documents/doc/Papers/fast_inh_paper/SVG/Figure2/generated_data/or_map1.png"
        xlink:href="generated_data/or_map1.png"
-       y="34.087158"
-       x="408.7507"
+       width="87.729164"
+       height="87.729164"
+       preserveAspectRatio="none"
        id="image3622"
-       preserveAspectRatio="none"
-       height="87.729164"
-       width="87.729164" />
+       x="408.7507"
+       y="34.087158" />
     <image
-       sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/SVG/Figure2/generated_data/or_map2.png"
+       sodipodi:absref="/Users/jan/Documents/doc/Papers/fast_inh_paper/SVG/Figure2/generated_data/or_map2.png"
        xlink:href="generated_data/or_map2.png"
-       y="133.97397"
-       x="408.7507"
+       width="87.729164"
+       height="87.729164"
+       preserveAspectRatio="none"
        id="image3633"
-       preserveAspectRatio="none"
-       height="87.729164"
-       width="87.729164" />
-    <image
-       sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/SVG/Figure2/generated_data/or_map3.png"
-       xlink:href="generated_data/or_map3.png"
-       y="233.60297"
        x="408.7507"
-       id="image3644"
-       preserveAspectRatio="none"
+       y="133.97397" />
+    <image
+       sodipodi:absref="/Users/jan/Documents/doc/Papers/fast_inh_paper/SVG/Figure2/generated_data/or_map3.png"
+       xlink:href="generated_data/or_map3.png"
+       width="87.729164"
        height="87.729164"
-       width="87.729164" />
+       preserveAspectRatio="none"
+       id="image3644"
+       x="408.7507"
+       y="233.60297" />
     <rect
        style="opacity:1;fill:none;fill-opacity:1;stroke:#fe001e;stroke-width:1.38498831;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect3662-8"
@@ -203,45 +203,33 @@
          x="388.6673"
          y="232.79596"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.75px;line-height:125%;font-family:sans;-inkscape-font-specification:'sans, Bold';text-align:start;writing-mode:lr-tb;text-anchor:start">D</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.75px;line-height:125%;font-family:Serif;-inkscape-font-specification:Serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="389.69788"
-       y="333.3674"
-       id="text4532-3-9-4"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan4534-0-7-7"
-         x="389.69788"
-         y="333.3674"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:13.75px;line-height:125%;font-family:sans;-inkscape-font-specification:'sans, Bold';text-align:start;writing-mode:lr-tb;text-anchor:start">E</tspan></text>
     <image
-       sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/SVG/Figure2/generated_data/fft_map1.png"
+       sodipodi:absref="/Users/jan/Documents/doc/Papers/fast_inh_paper/SVG/Figure2/generated_data/fft_map1.png"
        xlink:href="generated_data/fft_map1.png"
-       y="34.131042"
-       x="502.47986"
+       width="87.68528"
+       height="87.68528"
+       preserveAspectRatio="none"
        id="image4843"
-       preserveAspectRatio="none"
-       height="87.68528"
-       width="87.68528" />
+       x="502.47986"
+       y="34.131042" />
     <image
-       sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/SVG/Figure2/generated_data/fft_map2.png"
+       sodipodi:absref="/Users/jan/Documents/doc/Papers/fast_inh_paper/SVG/Figure2/generated_data/fft_map2.png"
        xlink:href="generated_data/fft_map2.png"
-       y="134.01785"
-       x="504.47986"
+       width="87.68528"
+       height="87.68528"
+       preserveAspectRatio="none"
        id="image4854"
-       preserveAspectRatio="none"
-       height="87.68528"
-       width="87.68528" />
+       x="504.47986"
+       y="134.01785" />
     <image
-       sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/SVG/Figure2/generated_data/fft_map3.png"
+       sodipodi:absref="/Users/jan/Documents/doc/Papers/fast_inh_paper/SVG/Figure2/generated_data/fft_map3.png"
        xlink:href="generated_data/fft_map3.png"
-       y="233.64685"
-       x="504.54202"
-       id="image4865"
-       preserveAspectRatio="none"
+       width="87.68528"
        height="87.68528"
-       width="87.68528" />
+       preserveAspectRatio="none"
+       id="image4865"
+       x="504.54202"
+       y="233.64685" />
     <rect
        style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4868"
@@ -313,32 +301,32 @@
          y="19.399471"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;font-family:sans;-inkscape-font-specification:sans">FFT</tspan></text>
     <image
-       sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/SVG/Figure2/generated_data/1gcal_shortrange_010000.00_V1_LGNOnAfferent.png"
+       sodipodi:absref="/Users/jan/Documents/doc/Papers/fast_inh_paper/SVG/Figure2/generated_data/1gcal_shortrange_010000.00_V1_LGNOnAfferent.png"
        xlink:href="generated_data/1gcal_shortrange_010000.00_V1_LGNOnAfferent.png"
-       width="85.19458"
-       height="85.19458"
-       preserveAspectRatio="none"
+       y="35.044155"
+       x="599.45898"
        id="image3590"
-       x="599.45898"
-       y="35.044155" />
+       preserveAspectRatio="none"
+       height="85.19458"
+       width="85.19458" />
     <image
-       sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/SVG/Figure2/generated_data/2gcal_shortrange_010000.00_V1_LGNOnAfferent.png"
+       sodipodi:absref="/Users/jan/Documents/doc/Papers/fast_inh_paper/SVG/Figure2/generated_data/2gcal_shortrange_010000.00_V1_LGNOnAfferent.png"
        xlink:href="generated_data/2gcal_shortrange_010000.00_V1_LGNOnAfferent.png"
-       width="85.19458"
-       height="85.19458"
-       preserveAspectRatio="none"
+       y="136.23874"
+       x="599.45898"
        id="image3601"
-       x="599.45898"
-       y="136.23874" />
-    <image
-       sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/SVG/Figure2/generated_data/3gcal_shortrange_010000.00_V1_LGNOnAfferent.png"
-       xlink:href="generated_data/3gcal_shortrange_010000.00_V1_LGNOnAfferent.png"
-       width="85.19458"
-       height="85.19458"
        preserveAspectRatio="none"
-       id="image3612"
+       height="85.19458"
+       width="85.19458" />
+    <image
+       sodipodi:absref="/Users/jan/Documents/doc/Papers/fast_inh_paper/SVG/Figure2/generated_data/3gcal_shortrange_010000.00_V1_LGNOnAfferent.png"
+       xlink:href="generated_data/3gcal_shortrange_010000.00_V1_LGNOnAfferent.png"
+       y="233.4333"
        x="599.45898"
-       y="233.4333" />
+       id="image3612"
+       preserveAspectRatio="none"
+       height="85.19458"
+       width="85.19458" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.75px;line-height:125%;font-family:Serif;-inkscape-font-specification:Serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"

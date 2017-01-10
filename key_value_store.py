@@ -28,4 +28,14 @@
 	# time constant Model
 	'membrane_time_constant_E' : 2, #ms
 	'membrane_time_constant_I' : 0.5, #ms
+	'rm_update_step' : 0.1, #ms
+	'rm_settle_time' : '150', #ms #!!!! double check when return to GIF!!!!!!
+	'rm_settle_steps' : '1500',#!!!! double check when return to GIF!!!!!!
+	'td_EE' : '1.4',
+	'td_EI' : '0.5',
+	'w_A' : 0.5,
+	'w_EE' : '?',
+	'w_EI' : 1.0,
+	'w_IE' : '?',
+	
 }
