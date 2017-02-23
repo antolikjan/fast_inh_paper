@@ -83,26 +83,47 @@ orientation tuning \citep{Somers1995,Ben-Yishai1995}, and functional map develop
 In developmental models of functional cortical organization the competition occurs between populations of neurons spatially offset 
 along the cortical surface, whereby local populations mutually reinforce each other via excitatory connections (short-range 
 excitation) while long-range inhibition facilitates competition between the local populations and stabilizes the activity in the 
-network. Such so called Mexican-hat arrangement of recurrent interactions, however, is in stark contrast to the know anatomical arrangement
+network. Such so called Mexican-hat arrangement of recurrent interactions (figure \ref{fig:lat_int}A), however, is in stark contrast to the know anatomical arrangement
 of cortical circuitry: the excitatory neurons (especially in superficial layers) tend to form long-range arborizations spanning 
 multiple columns while the axons of a majority of inhibitory neurons are confined to an area only several hundreds of micrometers 
-in diameter \citep{Buzas2006,Budd2001}. 
+in diameter \citep{Buzas2006,Budd2001} (figure \ref{fig:lat_int}B). 
 
 
-As pointed out by Muir \etal\, in their recent study \citep{Muir2014}, to solve this apparent conflict, previous topologically organized models of cortical competition have either relied on the anatomically unsupported Mexican-hat profile of lateral interactions \citep{VonderMalsburg1973,CMVC}, or relied on other biologically unrealistic properties, such as selective targeting of inhibitory neurons by long range excitatory connections \citep{law:phd09,Rutishauser2012} or instantaneous synaptic transmission coupled with omission of recurrent inhibition \citep{Kang2003,Levy2011,Grabska-Barwinska2008}. 
+As pointed out by Muir \etal\, in their recent study \citep{Muir2014}, to solve this apparent conflict, previous topologically organized models of cortical competition have either relied on the anatomically unsupported 
+Mexican-hat profile of lateral interactions \citep{VonderMalsburg1973,CMVC}, or relied on other biologically unrealistic properties, such as selective targeting of inhibitory neurons by long range excitatory 
+connections \citep{law:phd09,Rutishauser2012} or instantaneous synaptic transmission coupled with omission of recurrent inhibition \citep{Kang2003,Levy2011,Grabska-Barwinska2008}. 
 
-A common hypothesis about how to reconcile Mexican-hat lateral interactions with anatomical reality is that the range of the effective inhibitory influence of an excitatory neuron onto other excitatory neurons (via the disynaptic pathway from excitatory to inhibitory to excitatory neurons - the disynaptic inhibition) will correspond to the cumulative reach of the direct excitatory and the direct inhibitory connections. The effective
+A common hypothesis about how to reconcile Mexican-hat lateral interactions with anatomical reality is that the range of the effective inhibitory influence of an excitatory neuron 
+onto other excitatory neurons (via the disynaptic pathway from excitatory to inhibitory to excitatory neurons - the disynaptic inhibition) will correspond to the cumulative reach 
+of the direct excitatory and the direct inhibitory connections. The effective
 inhibitory interactions between excitatory neurons will thus have longer range than the direct excitatory connections, supporting the use
 of Mexican-hat lateral interactions in population models (i.e. models without explicit separation of excitatory and
 inhibitory populations). Even though very intuitive, this explanation has never been explicitly demonstrated, and  
 it omits the fact that under the reasonable null-hypothesis of equal transmission delays for all connections, 
 the recurrent disynaptic inhibition will lag the direct recurrent excitation. As it turns out this is crucial, 
-as recent model analysis by Muir \etal\,\citep{Muir2014} shows that, under the assumption of uniform transmission delays, the presence of competition across the cortical surface is predicted well by the anatomy of direct excitatory and inhibitory coupling and that multi-synaptic network effects are negligible, effectively rejecting the disynaptic explanation behind Maxican-hat interaction. In conclusion, currently no satisfactory explanation of how topological functional organization develops in cortical networks that is consistent with the present anatomical findings exists. 
+as recent model analysis by Muir \etal\,\citep{Muir2014} shows that, under the assumption of uniform transmission delays, 
+the presence of competition across the cortical surface is predicted well by the anatomy of direct excitatory and inhibitory coupling and that multi-synaptic 
+network effects are negligible, effectively rejecting the disynaptic explanation behind Maxican-hat interaction. 
+In conclusion, currently no satisfactory explanation of how topological functional organization develops in cortical networks that is consistent with the present anatomical findings exists. 
+
+\begin{figure}[htpb!] 
+\centering
+\includegraphics[width=16cm]{./SVG/FigureLateralInteractions/drawing.png}
+\caption{Cortical anatomy and effective lateral interactions. (A) Short-range excitation (red) and long-range inhibition (blue) leads to effective Mexican-hat lateral interactions (black curve). 
+(B) Anatomical evidence indicates the oposite organization of lateral connectivity in cortex, whereby excitatory neurons send long-range connections to other neurons, while inhibitory neurons only 
+local ones. Furthermore, uniform delays accross the intra-cortical projections is tipically assumed. It is not clear how such anatomical configuration can support the Mexican-hat effective interaction
+across cortical surface. (C) Under the assumption of slow excitatory-to-excitatory and fast excitatory-to-inhibitory and inhibitory-to-excitatory pathway (and disregarding the inhibitory-to-inhibitory interactions), 
+the effective lateral inhibitory interactions correspond to the convolution of the excitatory-to-inhibitory and inhibitory-to-excitatory connection kernels. Uner the assumption that these kernels are Gaussian (G($\sigma$) in 
+the figure), the effective inhibitory interactions will be Gaussian with variance (space-constant) greater then the excitatory-to-excitatory one, thus forming Mexican-hat lateral interaction profile.
+}
+\label{fig:lat_int}
+\end{figure} 
+
 
 As we will show in this study, the nature of the transmission delays between different neural type (excitatory,inhibitory) combinations
 holds the key to resolving this long standing open question. A recent study by Ohana \etal\,\citep{Ohana2012} revealed a specific pattern of transmission delays between different neural type combinations. Specifically they found that the excitatory to excitatory connections are slow while the excitatory to inhibitory connections are fast. In this study we explore the 
 possibility that this specific transmission delay pattern is the missing link that can explain how short range inhibition can lead 
-to effective cortical competition. We employ computational models to show that the fast excitatory-to-inhibitory-to-excitatory pathway allows for the disynaptic inhibition to generate the effective Mexican-hat like lateral interactions, thus for the first time 
+to effective cortical competition. We employ computational models to show that the fast excitatory-to-inhibitory-to-excitatory pathway allows for the disynaptic inhibition to generate the effective Mexican-hat like lateral interactions (figure \ref{fig:lat_int}C), thus for the first time 
 explaining competition in topologically organized cortical networks with no biologically implausible assumptions. To demonstrate the
 proposed properties, in this study we focus on models of development of orientation maps, because this is the most well explored
 example of competition driven functional cortical organization development, but these results generalize to development of other
