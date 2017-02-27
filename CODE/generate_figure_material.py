@@ -70,7 +70,39 @@ def figure2():
         pylab.xticks([0,len(np.unique(X))-1],[data[2][0],data[2][-1]])
         pylab.savefig('figure2.png',dpi=600)
     
-    
+
+    if True:
+        X = []
+	Y = []
+        qual = []
+
+
+        for a in os.listdir(dirr):
+            b = os.path.join(dirr,a);
+
+            if not stat.S_ISDIR(os.stat(b).st_mode):
+                continue
+	    
+	    f = open(os.path.join(b,'results.pickle'))
+            d = pickle.load(f)
+            
+	    X.append(d['lat_strength_ratio'])
+            Y.append(d['exc_inh_ratio'])
+
+            # load result file 
+            load_snapshot(os.path.join(b,'snapshot.typ'))
+    	    qual.append(numpy.mean(topo.sim["V1"].sheet_views["OrientationSelectivity"].view()[0]))
+	    print qual[-1]
+
+	data = np.histogram2d(Y, X, bins=[len(np.unique(Y)),len(np.unique(X))], weights=qual)
+        pylab.figure(dpi=600,facecolor='w',figsize=(5,5))
+        im = pylab.imshow(data[0],interpolation='none',cmap='gray')#,vmin=0.3)
+        pylab.colorbar(im,fraction=0.046, pad=0.04)
+        pylab.yticks([0,len(np.unique(Y))-1],[data[1][0],data[1][-1]])
+        pylab.xticks([0,len(np.unique(X))-1],[data[2][0],data[2][-1]])
+        pylab.savefig('figure_sel.png',dpi=600)
+
+
     if False:
        f = open('/home/jan/Doc/Papers/fast_inh_paper/DATA/GCAL_SHORTRANGE/lat_strength_ratio=2.2_exc_inh_ratio=0.85/results.pickle') 
        d = pickle.load(f)
@@ -130,7 +162,7 @@ def figure2():
        load_snapshot('/home/jan/Doc/Papers/fast_inh_paper/DATA/GCAL_SHORTRANGE/lat_strength_ratio=2.8_exc_inh_ratio=0.65/results.pickle')
        save_plotgroup("Projection",projection=topo.sim["V1"].projections().values()[0],density=1.5,saver_params={'filename_prefix' : '1'})
 
-    if True:
+    if False:
        load_snapshot('/home/jan/projects/topographica/GCAL_EI/a-p_exc_strength=3.3_-p_inh_strength=2.805/snapshot.typ')
        mmap = topo.sim["V1"].sheet_views["OrientationPreference"].view()[0]
 

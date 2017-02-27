@@ -533,8 +533,19 @@ We have also shown that these findings are applicable to the problem of function
 to show using computational methods that the proposed models are robust to the addition of other well established features of cortical anatomy, commonly 
 ignored by similar studies, including the long-range excitatory connections and mutual inhibition among inhibitory neurons. Finally, we have shown 
 that the proposed mechanisms are robust to the variations of the exact delay ratio between the mono-synaptic excitation and di-synaptic inhibition. 
-Overall, this study represents an important advance in our understanding of how orientation map development can be supported by the cortical neural substrate. These
-results generalize to the development of other functional features in the cortex and other cortical competition based mechanisms in general.
+Overall, this study represents an important advance in our understanding of how orientation map development can be supported by the cortical neural substrate. 
+
+Using neuron reconstruction data of the recorded neurons, Ohana \etal,\citep{Ohana2012} identified the 
+placement of the different pre-post synaptic combinations on the dendrites of the target cell as the likely origin of this 
+transmission delay heterogeneity. They found that the excitatory-to-inhibitory synapses were closer to the soma
+of the post-synaptic neuron than the excitatory-to-excitatory and inhibitory-to-excitatory synapses. An axonal origin 
+for the transmission delay heterogeneity is unlikely, as Ohana \etal,\citep{Ohana2012} found that all the pre-post combinations were, on
+average, equally distant from the pre-synaptic cell body. They further supported the dendritic origin of the observed
+delay inhomogeneities by showing in a computational model that the observed delay magnitudes can be explained by
+these anatomical findings. Overall this indicates a mechanism for the generation of the differences in 
+inter-neuron transmission delays that is likely to generalize beyond the primary visual cortex. We thus suggest that the
+results presented in this study generalize to the development of other functional features and other 
+cortical competition based mechanisms whose origin is outside of primary visual cortex.
 
 The most related past explanation of how cortical competition can arise under short range inhibition is that of Kang \etal\,\citep{Kang2003}, who have shown 
 that under the assumption of a faster inhibitory time constant (as opposed to excitatory), the effective excitatory and inhibitory interactions will follow the 
@@ -547,17 +558,21 @@ in the model are rescued and we observe development of high quality orientation 
 
 The analytical results in this study were obtained only under simplifying assumptions, specifically instantaneous translation of inputs to membrane potential, equal extent of 
 excitatory and inhibitory connections and a lack of inhibitory-to-inhibitory interactions. Even though we have shown computationally that these assumptions are not necessary 
-for achieving the cortical competition and the consequential orientation map development sought in this study, further analytical work then can circumvent these simplifications and would 
+for achieving the cortical competition and the consequential orientation map development sought in this study, further analytical work then can circumvent these simplifications would 
 undoubtedly provide deeper understanding of the dynamics of the studied neural system and its dependence on the various parameters. This sentiment underlies the parameter 
 explorations presented here, which show that even though the model is robust to changes in the considered parameters, the existence or not of dynamics supporting development of 
-orientation maps forms a complex pattern within the explored parameter spaces. Furthermore, the relative computational complexity of the studied models and the extensive set of parameters
+orientation maps can form a complex pattern within the explored parameter spaces. This is particularly the case for the model variant with inhibitory-to-inhibitory interactions, in which 
+(unlike in the other variants) the inhibitory population gains it's own dynamics. Furthermore, the relative computational complexity of the studied models and the extensive set of parameters
 involved preclude systematic search across the full parameter space, and we have only explored parameters that we empirically found to have the biggest impact. Finally, one simplifying assumption 
 that we have not treated in this study is the lack of direct thalamic input onto inhibitory cells. Since inhibitory cells in cortical layer 4 do receive thalamic input \citep{Binzegger2004} the 
 inclusion of external input in the inhibitory population needs to be considered in the future.
 
-In this paper we have decided to investigate cortical competitive mechanisms through the prism of orientation map development. The advantage of this approach is that it allows us not only to show that some form of competition is possible, but also that it is of the form that actually supports implementation of specific cortical computations. 
-Given that we show that our model implements effective Mexican hat lateral interactions (section \ref{sec:SM1}) and these have in the past been shown to be sufficient to explain cortical organization of other functional features (i.e. retinotopy, ocular dominance, spatial frequency and color) it is very likely that our results will generalize to these other dimensions of sensory input as well. Cortical competition of other forms has been proposed to underly a broad variety of other cortical operations, including associative memory, noise suppression, decision making, saliency detection and other forms of attentional computations. Even though additional work will be required to determine if the mechanisms proposed here can generalize to these other neural computations, this study offers 
-a promising framework for anatomically plausible mechanistic explanations of these important aspects of brain function.
+In this paper we have decided to investigate cortical competitive mechanisms through the prism of orientation map development. The advantage of this approach is that it allows us not only to show that some form 
+of competition is possible, but also that it is of the form that actually supports implementation of specific cortical computations. Given that we show that our model implements effective Mexican hat lateral 
+interactions (section \ref{sec:SM1}) and these have in the past been shown to be sufficient to explain cortical organization of other functional features (i.e. retinotopy, ocular dominance, spatial frequency and color) 
+it is very likely that our results will generalize to these other dimensions of sensory input as well. Cortical competition of other forms has been proposed to underly a broad variety of other cortical operations, 
+including associative memory, noise suppression, decision making, saliency detection and other forms of attentional computations. Even though additional work will be required to determine if the mechanisms proposed 
+here can generalize to these other neural computations, this study offers a promising framework for anatomically plausible mechanistic explanations of these important aspects of brain function.
 
 
 \section*{Conflict of Interest Statement}
