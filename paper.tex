@@ -11,24 +11,12 @@
 
 \newcommand{\etal}{\textit{et al.}}
 
-%\title[Running Title]{Fast inhibitory loop explains functional map development with short-range inhibition.}
-%\author{J\'an Antol\'ik}
-
-%\begin{document}
-%\maketitle
-
-
-
 \def\keyFont{\fontsize{8}{11}\helveticabold }
 \def\firstAuthorLast{Antol\'ik} 
 \def\Authors{J\'an Antol\'ik\,$^{1,*}$}
 \def\Address{$^{1}$ Unit\'e de Neurosciences, Information et Complexit\'e,CNRS UPR 3293, Gif-sur-Yvette, France }
-% The Corresponding Author should be marked with an asterisk
-% Provide the exact contact address (this time including street name and city zip code) and email of the corresponding author
 \def\corrAuthor{J\'an Antol\'ik}
 \def\corrEmail{antolikjan@gmail.com}
-
-
 
 
 \begin{document}
@@ -430,7 +418,7 @@ how short-range inhibition can induce cortical competition and consequently the 
 \includegraphics[width=16cm]{./SVG/Figure1/figure1.png}
 \caption{Orientation map development with short range inhibition and a fast excitatory-to-inhibitory-to-excitatory loop. (A) Map quality (see Materials and Methods) at a range of 
 lateral excitatory vs inhibitory projection strength ratios and afferent vs lateral projection strength ratios. (B-D) Functional organization in 3 example parameter configurations 
-indicated by the red marks. From left to right, the orientation map, fast-Fourier transform of the orientation map and afferent connection fields from the ON LGN model sheet for 25 example model V1 neurons. 
+indicated by the red marks. From left to right, the orientation map, the lateral interaction kernel (LIK; this is calculated based on eq. \ref{eqn:last}), fast-Fourier transform of the orientation map and afferent connection fields from the ON LGN model sheet for 25 example model V1 neurons. 
 (B-C) Two examples of sub-optimal orientation maps. (D) Model configuration with the highest quality map found in this parameter search. 
 (E) The same model configuration but in this case it was run with explicit simulation of inhibitory neurons and corresponding connections. E and D are nearly identical confirming the correctness of our analysis.
 }
@@ -465,7 +453,7 @@ connections ($\sigma_{i} = \sigma_{e}$ in eq \ref{eqn:first}).
 \includegraphics[width=16cm]{./SVG/Figure2/figure2.png}
 \caption{Orientation map development with short range inhibition, a fast excitatory-to-inhibitory-to-excitatory loop and inhibitory to inhibitory connections. (A) Map quality (see Materials and Methods) at a range of 
 inhibitory to inhibitory vs inhibitory to excitatory projection strength ratios and excitatory to inhibitory connection strengths. (B-D) Functional organization in 3 example parameter configurations 
-indicated by the red marks. From left to right, the orientation map, fast-Fourier transform of the orientation map and afferent connection fields from the ON LGN model sheet for 25 example model V1 neurons. }
+indicated by the red marks. From left to right, the orientation map, the lateral interaction kernel (LIK; this is calculated based on eq. \ref{eqn:last}), fast-Fourier transform of the orientation map and afferent connection fields from the ON LGN model sheet for 25 example model V1 neurons. }
 \label{fig:figure2}
 \end{figure} 
 
@@ -524,11 +512,8 @@ to inhibitory delays, and this choice was arbitrary).
 \centering
 \includegraphics[width=16cm]{./SVG/Figure4/figure4.png}
 \caption{Orientation map development in a rate model with a synaptic time constant. (A) Map quality (see Materials and Methods) at a range of 
-cumulative inhibitory delays expressed as the difference from the direct excitatory to excitatory delays. (B-F) Functional organization in 5 parameter configurations 
-indicated by the red marks. The orientation map (top), and afferent connection fields from the ON LGN model sheet for 81 example model V1 neurons (bottom). 
-(B-D) Three examples of configurations where good quality orientation maps develop. (E) If the cumulative inhibitory delay is longer by more than approximately 0.8ms in comparison
-to the direct excitatory delay the map quality starts to drop. (F) In the configuration corresponding to the case where delays on all connections are equal (i.e. the cumulative delays
-of the inhibitory interactions is twice as long as on the direct excitatory ones) orientation maps fail to develop.}
+cumulative inhibitory delays expressed as the difference from the direct excitatory to excitatory delays. (B-F) Functional organization in 5 parameter configurations indicated by the red marks. The orientation map (top), and afferent connection fields from the ON LGN model sheet for 81 example model V1 neurons (bottom). (B-D) Three examples of configurations where good quality orientation maps develop. (E) If the cumulative inhibitory delay is longer by more than approximately 0.8ms in comparison to the direct excitatory delay the map quality starts to drop. (F) In the configuration corresponding to the case where delays on all connections are equal (i.e. the cumulative delays of the inhibitory interactions is twice as long as on the direct excitatory ones) orientation maps fail to develop. The lateral interaction kernel is indicated on the left, but note that it is valid only
+for the first parametrization, corresponding to equal delays on the mono-synaptic excitation and dy-synaptic inhibition pathway.}
 \label{fig:figure4}
 \end{figure} 
 
