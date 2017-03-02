@@ -28,6 +28,49 @@ if False:
     0/0
 
 
+def plot_ortcs(snapshot_path,name_prefix):
+    def disable_top_right_axis(ax):
+		for loc, spine in ax.spines.iteritems():
+		    if loc in ['right', 'top']:
+	    		spine.set_color('none')  # don't draw spine
+		for tick in ax.yaxis.get_major_ticks():
+		        tick.tick2On = False
+		for tick in ax.xaxis.get_major_ticks():
+	    		tick.tick2On = False
+		ax.xaxis.tick_bottom()
+		ax.yaxis.tick_left()
+
+    def disable_left_axis(ax):
+	        for loc, spine in ax.spines.iteritems():
+	            if loc in ['left']:
+        		spine.set_color('none')  # don't draw spine
+	        for tick in ax.yaxis.get_major_ticks():
+		        tick.tick1On = False
+
+    def clean_figure():
+        import pylab
+        pylab.title('')
+        pylab.xlabel('')
+        pylab.ylabel('')
+        pylab.yticks([], [])
+        disable_top_right_axis(pylab.gca())
+        disable_left_axis(pylab.gca())
+        pylab.gca().get_legend().set_visible(False)
+        #pylab.gca().legend_.remove()
+	    
+	    
+    import topo.command.pylabplot
+    load_snapshot(snapshot_path)
+    topo.command.pylabplot.measure_or_tuning_fullfield.instance(sheet=topo.sim["V1"])()
+    topo.command.pylabplot.cyclic_tuning_curve.instance(x_axis="orientation",sheet=topo.sim["V1"],coords=[(0,0)])(); clean_figure(); pylab.savefig(name_prefix+"ORTC[0,0].png")
+    topo.command.pylabplot.cyclic_tuning_curve.instance(x_axis="orientation",sheet=topo.sim["V1"],coords=[(0.1,0.1)])(); clean_figure(); pylab.savefig(name_prefix+"ORTC[0.1,0.1].png")
+    topo.command.pylabplot.cyclic_tuning_curve.instance(x_axis="orientation",sheet=topo.sim["V1"],coords=[(0.1,-0.1)])(); clean_figure(); pylab.savefig(name_prefix+"ORTC[0.1,-0.1].png") 
+    topo.command.pylabplot.cyclic_tuning_curve.instance(x_axis="orientation",sheet=topo.sim["V1"],coords=[(-0.1,0.1)])(); clean_figure(); pylab.savefig(name_prefix+"ORTC[-0.1,0.1].png")
+    topo.command.pylabplot.cyclic_tuning_curve.instance(x_axis="orientation",sheet=topo.sim["V1"],coords=[(-0.1,-0.1)])(); clean_figure();pylab.savefig(name_prefix+"ORTC[-0.1,-0.1].png") 
+
+
+
+
 def figure2():
     dirr = '/home/jan/Doc/Papers/fast_inh_paper/DATA/GCAL_SHORTRANGE'
     rhos = {}
@@ -70,38 +113,10 @@ def figure2():
         pylab.xticks([0,len(np.unique(X))-1],[data[2][0],data[2][-1]])
         pylab.savefig('figure2.png',dpi=600)
     
-
     if True:
-        X = []
-	Y = []
-        qual = []
-
-
-        for a in os.listdir(dirr):
-            b = os.path.join(dirr,a);
-
-            if not stat.S_ISDIR(os.stat(b).st_mode):
-                continue
-	    
-	    f = open(os.path.join(b,'results.pickle'))
-            d = pickle.load(f)
-            
-	    X.append(d['lat_strength_ratio'])
-            Y.append(d['exc_inh_ratio'])
-
-            # load result file 
-            load_snapshot(os.path.join(b,'snapshot.typ'))
-    	    qual.append(numpy.mean(topo.sim["V1"].sheet_views["OrientationSelectivity"].view()[0]))
-	    print qual[-1]
-
-	data = np.histogram2d(Y, X, bins=[len(np.unique(Y)),len(np.unique(X))], weights=qual)
-        pylab.figure(dpi=600,facecolor='w',figsize=(5,5))
-        im = pylab.imshow(data[0],interpolation='none',cmap='gray')#,vmin=0.3)
-        pylab.colorbar(im,fraction=0.046, pad=0.04)
-        pylab.yticks([0,len(np.unique(Y))-1],[data[1][0],data[1][-1]])
-        pylab.xticks([0,len(np.unique(X))-1],[data[2][0],data[2][-1]])
-        pylab.savefig('figure_sel.png',dpi=600)
-
+        plot_ortcs('/home/jan/Doc/Papers/fast_inh_paper/DATA/GCAL_SHORTRANGE/lat_strength_ratio=2.2_exc_inh_ratio=0.85/snapshot.typ',"fig2_1_")
+        plot_ortcs('/home/jan/Doc/Papers/fast_inh_paper/DATA/GCAL_SHORTRANGE/lat_strength_ratio=2.6_exc_inh_ratio=0.8/snapshot.typ',"fig2_2_")
+        plot_ortcs('/home/jan/Doc/Papers/fast_inh_paper/DATA/GCAL_SHORTRANGE/lat_strength_ratio=2.8_exc_inh_ratio=0.65/snapshot.typ',"fig2_3_")
 
     if False:
        f = open('/home/jan/Doc/Papers/fast_inh_paper/DATA/GCAL_SHORTRANGE/lat_strength_ratio=2.2_exc_inh_ratio=0.85/results.pickle') 
@@ -191,7 +206,7 @@ def figure3():
     Y = []
     qual = []
 
-    if True:
+    if False:
         for a in os.listdir(dirr):
             b = os.path.join(dirr,a);
 
@@ -223,6 +238,11 @@ def figure3():
 	cax = divider.append_axes("right", size="5%", pad=0.05)
         pylab.colorbar(im,cax=cax)
         pylab.savefig('figure3.png',dpi=600)
+    
+    if True:
+        plot_ortcs('/home/jan/Doc/Papers/fast_inh_paper/DATA/GCAL_EI_II/exc_inh_strength=3.5_inh_inh_strength=0.2/snapshot.typ',"fig3_1_")
+        plot_ortcs('/home/jan/Doc/Papers/fast_inh_paper/DATA/GCAL_EI_II/exc_inh_strength=3.7_inh_inh_strength=0.4/snapshot.typ',"fig3_2_")
+        plot_ortcs('/home/jan/Doc/Papers/fast_inh_paper/DATA/GCAL_EI_II/exc_inh_strength=3.7_inh_inh_strength=1.0/snapshot.typ',"fig3_3_")
     
     if False:
 
@@ -339,6 +359,13 @@ def figure4():
         pylab.savefig('figure4.png',dpi=600)
     
     if True:
+        plot_ortcs('/home/jan/Doc/Papers/fast_inh_paper/DATA/GCAL_EI_II_LONGE/a-p_exc_strength=9_-p_exc_inh_strength=9.7_-p_exc_short_long_ratio=0.3_-p_cortex_exc_target_activity=0.003/snapshot.typ',"fig4_1_")
+        plot_ortcs('/home/jan/Doc/Papers/fast_inh_paper/DATA/GCAL_EI_II_LONGE/a-p_exc_strength=9_-p_exc_inh_strength=10.6_-p_exc_short_long_ratio=0.5_-p_cortex_exc_target_activity=0.003/snapshot.typ',"fig4_2_")
+        plot_ortcs('/home/jan/Doc/Papers/fast_inh_paper/DATA/GCAL_EI_II_LONGE/a-p_exc_strength=9_-p_exc_inh_strength=9.4_-p_exc_short_long_ratio=0.6_-p_cortex_exc_target_activity=0.003/snapshot.typ',"fig4_3_")
+        plot_ortcs('/home/jan/Doc/Papers/fast_inh_paper/DATA/GCAL_EI_II_LONGE/a-p_exc_strength=9_-p_exc_inh_strength=10.6_-p_exc_short_long_ratio=0.8_-p_cortex_exc_target_activity=0.003/snapshot.typ',"fig4_4_")
+
+    
+    if False:
 
        fname= '/home/jan/Doc/Papers/fast_inh_paper/DATA/GCAL_EI_II_LONGE/a-p_exc_strength=9_-p_exc_inh_strength=9.7_-p_exc_short_long_ratio=0.3_-p_cortex_exc_target_activity=0.003'
        f = open(fname+'/results.pickle') 
@@ -523,8 +550,8 @@ def a():
 
 #a()
 figure2()
-#figure3()
-#figure4()
+figure3()
+figure4()
 #a()
 #figure5()
 
