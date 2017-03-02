@@ -98,10 +98,10 @@ In conclusion, currently no satisfactory explanation of how topological function
 \centering
 \includegraphics[width=16cm]{./SVG/FigureLateralInteractions/drawing.png}
 \caption{Cortical anatomy and effective lateral interactions. (A) Short-range excitation (red) and long-range inhibition (blue) leads to effective Mexican-hat lateral interactions (black curve). 
-(B) Anatomical evidence indicates the oposite organization of lateral connectivity in cortex, whereby excitatory neurons send long-range connections to other neurons, while inhibitory neurons only 
-local ones. Furthermore, uniform delays accross the intra-cortical projections is tipically assumed. It is not clear how such anatomical configuration can support the Mexican-hat effective interaction
+(B) Anatomical evidence indicates the opposite organization of lateral connectivity in cortex, whereby excitatory neurons send long-range connections to other neurons, while inhibitory neurons only 
+local ones. Furthermore, uniform delays across the intra-cortical projections is typically assumed. It is not clear how such anatomical configuration can support the Mexican-hat effective interaction
 across cortical surface. (C) Under the assumption of slow excitatory-to-excitatory and fast excitatory-to-inhibitory and inhibitory-to-excitatory pathway (and disregarding the inhibitory-to-inhibitory interactions), 
-the effective lateral inhibitory interactions correspond to the convolution of the excitatory-to-inhibitory and inhibitory-to-excitatory connection kernels. Uner the assumption that these kernels are Gaussian (G($\sigma$) in 
+the effective lateral inhibitory interactions correspond to the convolution of the excitatory-to-inhibitory and inhibitory-to-excitatory connection kernels. Under the assumption that these kernels are Gaussian (G($\sigma$) in 
 the figure), the effective inhibitory interactions will be Gaussian with variance (space-constant) greater then the excitatory-to-excitatory one, thus forming Mexican-hat lateral interaction profile.
 }
 \label{fig:lat_int}
@@ -112,10 +112,9 @@ As we will show in this study, the nature of the transmission delays between dif
 holds the key to resolving this long standing open question. A recent study by Ohana \etal\,\citep{Ohana2012} revealed a specific pattern of transmission delays between different neural type combinations. Specifically they found that the excitatory to excitatory connections are slow while the excitatory to inhibitory connections are fast. In this study we explore the 
 possibility that this specific transmission delay pattern is the missing link that can explain how short range inhibition can lead 
 to effective cortical competition. We employ computational models to show that the fast excitatory-to-inhibitory-to-excitatory pathway allows for the disynaptic inhibition to generate the effective Mexican-hat like lateral interactions (figure \ref{fig:lat_int}C), thus for the first time 
-explaining competition in topologically organized cortical networks with no biologically implausible assumptions. To demonstrate the
-proposed properties, in this study we focus on models of development of orientation maps, because this is the most well explored
-example of competition driven functional cortical organization development, but these results generalize to development of other
-cortical topological properties, as well as potentially other competition based computations.
+explaining competition in topologically organized cortical networks with no biologically implausible assumptions. 
+
+To demonstrate the proposed implementation of competitive interactions on a specific feature of the V1 processing, in this study we focus on models of development of functional cortical organization. Functional properties of neurons in primary visual cortex, such orientation, color and frequency preference is not randomly distributed along the cortical surface but rather form smooth topological maps \citep{swindale:network96,goodhill:neuron07}, whereby nearby neurons prefer similar stimulus features. Such smooth topological mapping of function on cortical surface is ubiquitous throughout the cortex \citep{Huth2016}, found in multiple species, and implicated in a number of functional properties of V1, and of cortex in general. Here we restrict our attention to orientation preference, as it is the most well explored example of competition driven functional cortical organization development, but these results generalize to development of other cortical topological properties, as well as potentially other competition based computations.
 
 
 \section{Materials and Methods}
@@ -138,33 +137,44 @@ for the excitatory population. (C) Thalamic neurons are modeled as simple differ
 
 \subsection{GCAL model}\label{sec:gcal}
 
-In sections \ref{sec:SM1} through \ref{sec:SM3} (model 1, 2 and 3; see figure \ref{fig:model_variants}) we use the GCAL model \citep{Stevens2013}  which is the most advanced variant of the LISSOM (Laterally Interconnected Synergetically Self-Organizing Map) algorithm introduced by Miikkulainen \etal\,\citep{CMVC}, which itself is based on earlier Self-Organizing Map models \citep{Kohonen1982}.
+In sections \ref{sec:SM1} through \ref{sec:SM3} (model 1, 2 and 3; see figure \ref{fig:model_variants}) we use the GCAL model \citep{Stevens2013}  which is the most advanced variant of the LISSOM (Laterally Interconnected Synergetically Self-Organizing Map) algorithm introduced by Miikkulainen \etal\,\citep{CMVC}, which itself is based on earlier Self-Organizing Map models \citep{Kohonen1982}. Several mechanistic explanations of how orientation
+maps can develop in primary visual cortex have been proposed, but most, including the LISSOM family of models, involve two key ingredients: (1) stimulus
+driven Hebbian learning on the thalamo-cortical synapses, that ensures the formation of afferent connectivity pattern inducing Gabor like RFs (and consequently orientation, frequency and phase preference) to V1 neural units; and (2) a Mexican-hat-like effective lateral interactions within the  cortical population of neural units, that induce co-activation among proximate units while competition between more distal units. 
 
-For clarity and consistency the following model description closely follows the methodology sections in our 
+To understand how these two mechanisms lead to development of orientation maps, consider first the initial state of the model with isotropic afferent connectivity. When stimulus is presented to the model for the first time, the activity of the cortical population will after few simulation steps settle into a pattern that can be best described as random placement of 'blobs', whereby nearby neurons tend to be either co-active or silent. At this point, the placement of the local activity centers (the `blobs`) is essentially random, determined by the interplay of the competitive influence of the lateral interactions with whatever source of variability present in the model (e.g. random noise in the initial connections or content of the stimulus). The Hebbian learning will ensure, that all neurons within the active local populations will adjust they afferent weights slightly towards the stimulus pattern appearing within their RFs. They will thus in subsequent iterations be slightly more activated by similar patterns. 
+
+This iterative process of stimulus presentation, activity pattern formation and Hebbian adjustment of the thalamo-cortical weights will keep repeating. However note, that in the subsequent iterations, neurons whose afferent weights will be more similar with the currently presented stimulus falling withing their RF will tend to be more active then those whose RF at that point differs from the presented stimulus. Importantly even small differences of the initial activations will be magnified by the lateral competitive interactions thus overall driving nearby neurons to over time develop sharp selectivity for similar stimulus features while more distal neurons will be driven to develop selectivity to other stimulus features. Which features will be mapped onto
+cortical surface will depend on the exact statistics of the stimuli shown during training. It turns out that if the stimuli are natural images, or 
+other artificial stimuli with strong oriented components, smooth representation of orientation preference across the cortical surface (the orientation
+maps) will develop. In this study we will focus on this specific feature (orientation), as it is the most well studied one, but it is important to
+emphasize that given the right stimulation conditions, multiplexed representation of other features, such as ocular dominance, disparity, spatial frequency and others can develop \citep{CMVC}.
+
+In the reminder of this section we will describe one specific implementation of model with overall dynamics following the 
+broad description outlined in the previous paragraphs. For clarity and consistency the following model description closely follows the methodology sections in our 
 previous work \citep{Stevens2013,Antolik2011}. The architecture of the 3 GCAL variants presented in this 
 paper is depicted in figure \ref{fig:model_architecture} and figure \ref{fig:model_variants}A-C. The models are implemented in the Topographica simulator, freely available at www.topographica.org. 
-Each of the GCAL models consists of a set of sheets of model neural units, corresponding to: (1) the photoreceptors, (2) the combined effects of the retinal ganglion cells (RGC) and ON and OFF LGN cells. Furthermore each model has one V1 sheet of units with direct excitatory and inhibitory interactions (model 1; see figure \ref{fig:model_variants}), or two 
+Each of the GCAL models consists of a set of sheets of model neural units, corresponding to: (1) the photo-receptors, (2) the combined effects of the retinal ganglion cells (RGC) and ON and OFF LGN cells. Furthermore each model has one V1 sheet of units with direct excitatory and inhibitory interactions (model 1; see figure \ref{fig:model_variants}), or two 
 V1 sheets, one corresponding to excitatory and one to inhibitory neurons (model 2 and 3; see figure \ref{fig:model_variants}).
 The model sheet is a 2D array of computational elements (called units or, loosely, neurons), with activation and plasticity equations as 
 described below and referenced by a coordinate system we will refer to as sheet coordinates, where the center of the sheet is designated (0.0,0.0).  
 The number of units simulated in each sheet is determined by the density of units per unit length in both sheet dimensions. 
 All cortical sheets have nominal dimensions \insval{cortex_size}$\times$\insval{cortex_size} in sheet coordinates. The sizes of the
-RGC/LGN (\insval{lgn_size}$\times$\insval{lgn_size}) and photoreceptor (\insval{visual_field_size}$\times$\insval{visual_field_size}) sheets
+RGC/LGN (\insval{lgn_size}$\times$\insval{lgn_size}) and photo-receptor (\insval{visual_field_size}$\times$\insval{visual_field_size}) sheets
 were chosen to ensure that each unit in the receiving sheet has a complete set of connections, thus minimizing edge effects in the
 RGC/LGN and V1 sheets. The density of units per $1.0\times$1.0 area is \insval{cortex_density}$\times$\insval{cortex_density} 
-for the photoreceptor and RGC/LGN ON and OFF sheets, and \insval{cortex_density}$\times$\insval{cortex_density} for both cortical sheets.
+for the photo-receptor and RGC/LGN ON and OFF sheets, and \insval{cortex_density}$\times$\insval{cortex_density} for both cortical sheets.
 
 \subsubsection{Simulation run-time and stimuli}
 
 As a simplification, GCAL ignores the detailed temporal properties of the sub-cortical neural responses and of signal propagation along the various types of connections. Instead, the model ON/OFF units have a constant, sustained output, and all connections have a constant delay, independent of the physical length of that connection. The simulator operates in discrete time steps. Retinal input changes every \insval{settle_steps} time steps (and during this period is kept constant), and therefore afferent inputs to the V1 sheet(s) are effectively updated every \insval{settle_steps} steps. This process is a discrete simulation of an otherwise continuous series of changes in membrane potential due to incoming spikes and consequent generation of spikes. One such training iteration (\insval{settle_steps} steps) in the model represents one visual fixation i.e., an iteration consists of a constant retinal activation, followed by processing at the ON/OFF and cortical levels.
 
-The activation value $\psi_{i}$ of unit i in the photoreceptor sheet (P) is given by the gray-scale value in the chosen image at that point.
+The activation value $\psi_{i}$ of unit i in the photo-receptor sheet (P) is given by the gray-scale value in the chosen image at that point.
 In this study we use two-dimensional elongated Gaussian patterns, whose center coordinates and orientation are sampled from a uniform 
-distribution that covers the area of the photoreceptor sheet and the full range of orientations. Every \insval{settle_steps} time steps \insval{num_gaussian_stim} Gaussian patterns are superimposed to form the visual input.
+distribution that covers the area of the photo-receptor sheet and the full range of orientations. Every \insval{settle_steps} time steps \insval{num_gaussian_stim} Gaussian patterns are superimposed to form the visual input.
 
 \subsubsection{The LGN/RGC ON and OFF sheets}
 
-The ON/OFF units are called RGC/LGN units because they represent the entire pathway between the retinal photoreceptors
+The ON/OFF units are called RGC/LGN units because they represent the entire pathway between the retinal photo-receptors
 and V1, including the retinal ganglion cells, LGN cells, and the connection pathways. The activation level for a unit at position $j$
 in an RGC/LGN sheet at time $t$ is defined as:
 %%
@@ -178,11 +188,11 @@ in an RGC/LGN sheet at time $t$ is defined as:
 A_{j}(t) = \gamma_{F}\sum_{i\in F_j}\Psi_{i}(t)\omega_{ij}
 \end{equation}
 %%
-The activation function $f$ is a half-wave rectifying function that ensures positive activation values, constant $\gamma_{F}=\insval{retina_to_lgn_strength}$ defines the overall strength of the afferent connections from the retina, constant $\gamma_{L}=\insval{lateral_lgn_strength}$ defines the strength of the lateral connections within the RGC/LGN sheet, constant $c=\insval{lateral_lgn_gain}$ defines the slope of the gain, $\Psi_{i}$ is the activation of unit $i$ taken from the set of photoreceptors
+The activation function $f$ is a half-wave rectifying function that ensures positive activation values, constant $\gamma_{F}=\insval{retina_to_lgn_strength}$ defines the overall strength of the afferent connections from the retina, constant $\gamma_{L}=\insval{lateral_lgn_strength}$ defines the strength of the lateral connections within the RGC/LGN sheet, constant $c=\insval{lateral_lgn_gain}$ defines the slope of the gain, $\Psi_{i}$ is the activation of unit $i$ taken from the set of photo-receptors
 from which RGC/LGN unit $j$ receives input (its connection field $F_j$), $\omega_{ij}$ is the connection weight from unit $i$ in the
 retina to unit $j$ in the RGC/LGN, and $l_{kj}$ is the lateral connection weight from RGC/LGN unit $k$ to RGC/LGN unit $j$.
-Weights from the photoreceptors to units in the ON and OFF channels are set to fixed strengths with a difference-of-Gaussians
-kernel ($\sigma_{center}=\insval{lgn_center_sigma}$, $\sigma_{surround}=\insval{lgn_surround_sigma}$, in sheet dimensions), with ON connection fields having a positive center and a negative surround and vice versa for OFF.  The lateral RGC/LGN weights are 2D Gaussians with kernel size $\sigma=\insval{lgn_lateral_sigma}$. The center of the afferent and lateral connection field of each ON/OFF unit is mapped to the location in the photoreceptor and LGN sheet corresponding to the location of that unit in sheet coordinates, making all these projections retinotopic.
+Weights from the photo-receptors to units in the ON and OFF channels are set to fixed strengths with a difference-of-Gaussians
+kernel ($\sigma_{center}=\insval{lgn_center_sigma}$, $\sigma_{surround}=\insval{lgn_surround_sigma}$, in sheet dimensions), with ON connection fields having a positive center and a negative surround and vice versa for OFF.  The lateral RGC/LGN weights are 2D Gaussians with kernel size $\sigma=\insval{lgn_lateral_sigma}$. The center of the afferent and lateral connection field of each ON/OFF unit is mapped to the location in the photo-receptor and LGN sheet corresponding to the location of that unit in sheet coordinates, making all these projections retinotopic.
 
 \subsubsection{Cortical model}
 
@@ -246,7 +256,7 @@ The initial connection field weights are isotropic 2D Gaussians for the lateral 
 $\sigma_{p}$ determines the width of the Gaussian in sheet coordinates ($\sigma_{A}=0.27$,$\sigma_{E}=0.035$,$\sigma_{I}=0.035 \sqrt{2}$), 
 and $Z_{p}$ is a constant normalizing term that ensures that the total of all weights $\omega_{ijp}$ to neuron $j$ in projection $p$ is 1.0. Weights for each projection are only defined within a specific maximum circular radius $r_p$ ($r_{A}=0.27$,$r_{E}=0.15$,$r_{I}=0.15 \sqrt{2}$).
 
-In the model, as images are presented to the photoreceptors, the cortical afferent connection weights $\omega_{i,j,A}$ from the ON/OFF sheets are adjusted once per iteration (after cortical settling is completed) using a simple Hebbian learning rule. This rule results in connections that reflect correlations between the presynaptic ON/OFF unit activities and the postsynaptic cortical response. Hebbian connection weight adjustment at each iteration is dependent on the presynaptic activity, the postsynaptic response, and the Hebbian learning rate:
+In the model, as images are presented to the photo-receptors, the cortical afferent connection weights $\omega_{i,j,A}$ from the ON/OFF sheets are adjusted once per iteration (after cortical settling is completed) using a simple Hebbian learning rule. This rule results in connections that reflect correlations between the presynaptic ON/OFF unit activities and the postsynaptic cortical response. Hebbian connection weight adjustment at each iteration is dependent on the presynaptic activity, the postsynaptic response, and the Hebbian learning rate:
 
 \begin{equation}
 \omega_{ijA}(t)=\frac{\omega_{ij}(t-1)+\beta_{p}\Psi_{j}(t)\Psi_{i}(t)}{\sum_{p \in \{ON,OFF\}}\sum_{k}\left(\omega_{kj,p}(t-1)+\beta_{p}\Psi_{j}(t)\Psi_{k}(t)\right)}
@@ -401,7 +411,7 @@ interactions conform with equation \ref{eqn:last}.
 \item The change in point 1 will result in a change in the balance of overall excitation and inhibition in the model which is critical 
 for successful functional development in the model. We will thus modify the strength of the lateral inhibition to compensate for changes due to modification 1.
 
-\item Analogously to 2, the changes in 1 change the overall balance between feedforward and lateral contributions to model a cortical neuron's activity, 
+\item Analogously to 2, the changes in 1 change the overall balance between feed-forward and lateral contributions to model a cortical neuron's activity, 
 which we will compensate by changing the overall strength of the lateral interactions.
 
 \end{enumerate} 
@@ -530,10 +540,7 @@ Under simplifying assumptions, we have analytically shown how disynaptic inhibit
 excitation can extend the effective range of inhibitory interactions, in contrast to the recent analytical 
 results showing that in the case of equal synaptic delays on all connections the disynaptic inhibition has negligible effects \citep{Muir2014}.\
 We have also shown that these findings are applicable to the problem of functional development in primary visual cortex. We have then proceeded 
-to show using computational methods that the proposed models are robust to the addition of other well established features of cortical anatomy, commonly 
-ignored by similar studies, including the long-range excitatory connections and mutual inhibition among inhibitory neurons. Finally, we have shown 
-that the proposed mechanisms are robust to the variations of the exact delay ratio between the mono-synaptic excitation and di-synaptic inhibition. 
-Overall, this study represents an important advance in our understanding of how orientation map development can be supported by the cortical neural substrate. 
+to show using computational methods that the proposed models are robust to the addition of other well established features of cortical anatomy, commonly ignored by similar studies, including the long-range excitatory connections and mutual inhibition among inhibitory neurons. Finally, we have shown that the proposed mechanisms are robust to the variations of the exact delay ratio between the mono-synaptic excitation and di-synaptic inhibition. Overall, this study represents an important advance in our understanding of how orientation map development can be supported by the cortical neural substrate. 
 
 Using neuron reconstruction data of the recorded neurons, Ohana \etal,\citep{Ohana2012} identified the 
 placement of the different pre-post synaptic combinations on the dendrites of the target cell as the likely origin of this 
@@ -546,6 +553,23 @@ these anatomical findings. Overall this indicates a mechanism for the generation
 inter-neuron transmission delays that is likely to generalize beyond the primary visual cortex. We thus suggest that the
 results presented in this study generalize to the development of other functional features and other 
 cortical competition based mechanisms whose origin is outside of primary visual cortex.
+
+In this study we have focused on the development of the global organization of the thalamo-cortical and cortico-cortical connectivity and 
+as a consequence the global organization of V1's most salient functional property - orientation tuning. How do, however, the individual model
+cortical units correspond to individual biological V1 neurons, e.g. do they have matching tuning properties? The detailed systematic investigation 
+of this question is outside the scope of this study; however, to offer at least a basic view of how the explored models behave at single-cell
+level, we show in figure \ref{fig:figure5} representative orientation tuning curves for all model parametrizations for which we have shown a 
+detailed view of their properties (i.e. we have presented their orientation map etc.). Figure \ref{fig:figure5} shows that orientation tuning of individual neurons  varies between the models and parametrizations, but all the models with good quality orientation maps also have reasonably realistic orientation tuning of single units. Several of these model parametrizations achieve sharp realistic contrast invariance of the orientation tuning width. At the same time, figure \ref{fig:figure5} shows that the relationship between the orientation maps and afferent connectivity patterns and the orientation tuning is not straightforward. For example some parametrizations with inferior maps achieve sharper tuning (e.g. figure \ref{fig:figure5} A2) in comparison with model parametrizations exhibiting high-quality orientation maps (e.g. figure \ref{fig:figure5} A3). Ultimately, further, more rigorous, quantification and systematic investigation of the single cell tuning properties and their dependence on the model parametrization will be necessary to fully understand these relationships.
+
+
+\begin{figure}[htpb!] 
+\centering
+\includegraphics[width=11cm]{./SVG/Figure5/figure5.png}
+\caption{Orientation tuning curves of individual V1 model units in models detailed in figures 4-6. Each row of the figure shows orientation tuning curves measured at 4 different contrasts of 5 model units, one in the center of the modelled cortical area and 4 positioned in the middle between the center and one of the 4 corners of the modelled cortical area. Each row corresponds to one of the model parametrizations that were detailed (i.e. their orientation map etc. was shown) in figure 3-5: tuning curves marked with A correspond to models from figure 4, B from figure 5 and C from digure 6.
+The order of the rows corresponding to a given figure 4,5 or 6 (i.e. marked with A,B or C) is the same as the order in which the model parametrization
+in the given figure were presented (i.e. orientation tuning curves measured in the model parametrization presented in the 2nd row of figure 5 will be displayed in the row marked as B2 in this figure).}
+\label{fig:figure5}
+\end{figure} 
 
 The most related past explanation of how cortical competition can arise under short range inhibition is that of Kang \etal\,\citep{Kang2003}, who have shown 
 that under the assumption of a faster inhibitory time constant (as opposed to excitatory), the effective excitatory and inhibitory interactions will follow the 
@@ -593,7 +617,7 @@ providing valuable comments on the presented research.
 
 
 \bibliographystyle{frontiersinSCNS_ENG_HUMS}
-\bibliography{./mendeley}
+\bibliography{./mendeley,./external}
 
 \end{document}
 
