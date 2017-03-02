@@ -27,7 +27,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="492.66771"
+     inkscape:cx="363.02485"
      inkscape:cy="750.52465"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -56,12 +56,12 @@
     <image
        sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/SVG/Figure3/./generated_data/figure3.png"
        xlink:href="./generated_data/figure3.png"
-       width="331.42856"
-       height="331.42856"
-       preserveAspectRatio="none"
-       id="image3494"
+       y="52.746113"
        x="40.198555"
-       y="52.746113" />
+       id="image3494"
+       preserveAspectRatio="none"
+       height="331.42856"
+       width="331.42856" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#ff0000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 177.34942,244.47403 c 165.07794,0.60072 132.1525,35.35378 231.69908,34.35546"
@@ -149,21 +149,21 @@
     <image
        sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/SVG/Figure3/../Figure3/generated_data/or_map1.png"
        xlink:href="../Figure3/generated_data/or_map1.png"
-       width="87.729164"
-       height="87.729164"
-       preserveAspectRatio="none"
-       id="image3622"
+       y="34.087158"
        x="408.7507"
-       y="34.087158" />
+       id="image3622"
+       preserveAspectRatio="none"
+       height="87.729164"
+       width="87.729164" />
     <image
        sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/SVG/Figure3/../Figure3/generated_data/or_map2.png"
        xlink:href="../Figure3/generated_data/or_map2.png"
-       width="87.729164"
-       height="87.729164"
-       preserveAspectRatio="none"
-       id="image3633"
+       y="133.97397"
        x="408.7507"
-       y="133.97397" />
+       id="image3633"
+       preserveAspectRatio="none"
+       height="87.729164"
+       width="87.729164" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#ff0000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 282.79665,297.43138 c 67.29093,22.08532 27.09396,79.78466 126.64054,78.78634"
@@ -173,21 +173,21 @@
     <image
        sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/SVG/Figure3/../Figure3/generated_data/or_map3.png"
        xlink:href="../Figure3/generated_data/or_map3.png"
-       width="87.729164"
-       height="87.729164"
-       preserveAspectRatio="none"
+       y="233.60297"
+       x="408.7507"
        id="image3644"
-       x="408.7507"
-       y="233.60297" />
-    <image
-       sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/SVG/Figure3/../Figure3/generated_data/or_map4.png"
-       xlink:href="../Figure3/generated_data/or_map4.png"
-       y="332.78488"
-       x="408.7507"
-       id="image3644-8"
        preserveAspectRatio="none"
        height="87.729164"
        width="87.729164" />
+    <image
+       sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/SVG/Figure3/../Figure3/generated_data/or_map4.png"
+       xlink:href="../Figure3/generated_data/or_map4.png"
+       width="87.729164"
+       height="87.729164"
+       preserveAspectRatio="none"
+       id="image3644-8"
+       x="408.7507"
+       y="332.78488" />
     <rect
        style="opacity:1;fill:none;fill-opacity:1;stroke:#fe001e;stroke-width:2.39938354;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect3662"
@@ -271,30 +271,30 @@
     <image
        sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/SVG/Figure3/../Figure3/generated_data/fft_map1.png"
        xlink:href="../Figure3/generated_data/fft_map1.png"
-       width="87.68528"
-       height="87.68528"
-       preserveAspectRatio="none"
-       id="image4843"
+       y="33.625965"
        x="531.74255"
-       y="33.625965" />
+       id="image4843"
+       preserveAspectRatio="none"
+       height="87.68528"
+       width="87.68528" />
     <image
        sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/SVG/Figure3/../Figure3/generated_data/fft_map2.png"
        xlink:href="../Figure3/generated_data/fft_map2.png"
-       width="87.68528"
-       height="87.68528"
-       preserveAspectRatio="none"
-       id="image4854"
+       y="134.01785"
        x="532.47986"
-       y="134.01785" />
+       id="image4854"
+       preserveAspectRatio="none"
+       height="87.68528"
+       width="87.68528" />
     <image
        sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/SVG/Figure3/../Figure3/generated_data/fft_map3.png"
        xlink:href="../Figure3/generated_data/fft_map3.png"
-       width="87.68528"
-       height="87.68528"
-       preserveAspectRatio="none"
-       id="image4865"
+       y="233.64685"
        x="532.54199"
-       y="233.64685" />
+       id="image4865"
+       preserveAspectRatio="none"
+       height="87.68528"
+       width="87.68528" />
     <rect
        style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4868"
@@ -377,12 +377,12 @@
     <image
        sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/SVG/Figure3/../Figure3/generated_data/fft_map4.png"
        xlink:href="../Figure3/generated_data/fft_map4.png"
-       y="332.69153"
-       x="532.54199"
-       id="image4865-9"
-       preserveAspectRatio="none"
+       width="87.68528"
        height="87.68528"
-       width="87.68528" />
+       preserveAspectRatio="none"
+       id="image4865-9"
+       x="532.54199"
+       y="332.69153" />
     <rect
        style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4868-2-1"
@@ -393,51 +393,56 @@
     <image
        sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/SVG/Figure3/../Figure3/generated_data/1gcal_ei_ii_long_010000.00_V1_LGNOnAfferent.png"
        xlink:href="../Figure3/generated_data/1gcal_ei_ii_long_010000.00_V1_LGNOnAfferent.png"
-       y="35.044155"
-       x="627.45898"
-       id="image3590"
-       preserveAspectRatio="none"
+       width="85.19458"
        height="85.19458"
-       width="85.19458" />
+       preserveAspectRatio="none"
+       id="image3590"
+       x="627.45898"
+       y="35.044155" />
     <image
        sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/SVG/Figure3/../Figure3/generated_data/2gcal_ei_ii_long_010000.00_V1_LGNOnAfferent.png"
        xlink:href="../Figure3/generated_data/2gcal_ei_ii_long_010000.00_V1_LGNOnAfferent.png"
-       y="136.23874"
-       x="627.45898"
-       id="image3601"
-       preserveAspectRatio="none"
+       width="85.19458"
        height="85.19458"
-       width="85.19458" />
+       preserveAspectRatio="none"
+       id="image3601"
+       x="627.45898"
+       y="136.23874" />
     <image
        sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/SVG/Figure3/../Figure3/generated_data/3gcal_ei_ii_long_010000.00_V1_LGNOnAfferent.png"
        xlink:href="../Figure3/generated_data/3gcal_ei_ii_long_010000.00_V1_LGNOnAfferent.png"
-       y="233.4333"
-       x="627.45898"
-       id="image3612"
-       preserveAspectRatio="none"
+       width="85.19458"
        height="85.19458"
-       width="85.19458" />
+       preserveAspectRatio="none"
+       id="image3612"
+       x="627.45898"
+       y="233.4333" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.75px;line-height:125%;font-family:Serif;-inkscape-font-specification:Serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="631.53754"
-       y="18.513241"
+       x="670.51703"
+       y="12.513241"
        id="text4955-0-8"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan4957-6-2"
          x="631.53754"
-         y="18.513241"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;font-family:sans;-inkscape-font-specification:sans">receptive fields</tspan></text>
+         y="12.513241"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;font-family:sans;-inkscape-font-specification:sans;text-anchor:middle;text-align:center">LGN ON -&gt; V1</tspan><tspan
+         sodipodi:role="line"
+         x="631.53754"
+         y="25.013241"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;font-family:sans;-inkscape-font-specification:sans;text-anchor:middle;text-align:center"
+         id="tspan4194">connectin fields</tspan></text>
     <image
        sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/SVG/Figure3/../Figure3/generated_data/4gcal_ei_ii_long_010000.00_V1_LGNOnAfferent.png"
        xlink:href="../Figure3/generated_data/4gcal_ei_ii_long_010000.00_V1_LGNOnAfferent.png"
-       width="85.19458"
-       height="85.19458"
-       preserveAspectRatio="none"
-       id="image3612-8"
+       y="333.69348"
        x="628.25983"
-       y="333.69348" />
+       id="image3612-8"
+       preserveAspectRatio="none"
+       height="85.19458"
+       width="85.19458" />
     <rect
        style="opacity:1;fill:none;fill-opacity:1;stroke:#fe001e;stroke-width:2.39938354;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect3662-6"
