@@ -1,0 +1,724 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 744.09448819 1052.3622047"
+   id="svg4383"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="drawing.svg">
+  <defs
+     id="defs4385" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="557.28331"
+     inkscape:cy="494.45229"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1014"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata4388">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g4851"
+       transform="matrix(0.82383616,0,0,0.82383616,92.806619,-25.09249)">
+      <image
+         sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_1_ORTC[0.1,0.1].png"
+         xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_1_ORTC[0.1,0.1].png"
+         y="262.69397"
+         x="7.3437309"
+         id="image4450"
+         preserveAspectRatio="none"
+         height="118.2142"
+         width="118.2142" />
+      <image
+         sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_1_ORTC[0.1,-0.1].png"
+         xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_1_ORTC[0.1,-0.1].png"
+         y="262.69397"
+         x="538.36786"
+         id="image4461"
+         preserveAspectRatio="none"
+         height="118.2142"
+         width="118.2142" />
+      <image
+         sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_1_ORTC[0,0].png"
+         xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_1_ORTC[0,0].png"
+         y="262.69397"
+         x="405.61188"
+         id="image4472"
+         preserveAspectRatio="none"
+         height="118.2142"
+         width="118.2142" />
+      <image
+         sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_1_ORTC[-0.1,0.1].png"
+         xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_1_ORTC[-0.1,0.1].png"
+         y="262.69397"
+         x="272.8558"
+         id="image4483"
+         preserveAspectRatio="none"
+         height="118.2142"
+         width="118.2142" />
+      <image
+         sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_1_ORTC[-0.1,-0.1].png"
+         xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_1_ORTC[-0.1,-0.1].png"
+         y="262.69397"
+         x="140.09978"
+         id="image4494"
+         preserveAspectRatio="none"
+         height="118.2142"
+         width="118.2142" />
+    </g>
+    <g
+       id="g4872"
+       transform="matrix(0.82383616,0,0,0.82383616,93.395076,-11.420324)">
+      <image
+         sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_2_ORTC[0.1,0.1].png"
+         xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_2_ORTC[0.1,0.1].png"
+         y="133.84679"
+         x="537.65356"
+         id="image4572"
+         preserveAspectRatio="none"
+         height="118.21419"
+         width="118.2142" />
+      <image
+         sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_2_ORTC[0.1,-0.1].png"
+         xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_2_ORTC[0.1,-0.1].png"
+         y="133.84679"
+         x="404.89758"
+         id="image4583"
+         preserveAspectRatio="none"
+         height="118.21419"
+         width="118.2142" />
+      <image
+         sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_2_ORTC[0,0].png"
+         xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_2_ORTC[0,0].png"
+         y="133.84679"
+         x="272.14151"
+         id="image4594"
+         preserveAspectRatio="none"
+         height="118.21419"
+         width="118.2142" />
+      <image
+         sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_2_ORTC[-0.1,0.1].png"
+         xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_2_ORTC[-0.1,0.1].png"
+         y="133.84679"
+         x="6.629446"
+         id="image4605"
+         preserveAspectRatio="none"
+         height="118.21419"
+         width="118.2142" />
+      <image
+         sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_2_ORTC[-0.1,-0.1].png"
+         xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_2_ORTC[-0.1,-0.1].png"
+         y="133.84679"
+         x="139.3855"
+         id="image4616"
+         preserveAspectRatio="none"
+         height="118.21419"
+         width="118.2142" />
+    </g>
+    <g
+       id="g4865"
+       transform="matrix(0.82383616,0,0,0.82383616,93.395076,2.2518418)">
+      <image
+         sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_3_ORTC[0.1,0.1].png"
+         xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_3_ORTC[0.1,0.1].png"
+         y="4.9996948"
+         x="6.629446"
+         id="image4728"
+         preserveAspectRatio="none"
+         height="118.21419"
+         width="118.2142" />
+      <image
+         sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_3_ORTC[0.1,-0.1].png"
+         xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_3_ORTC[0.1,-0.1].png"
+         y="4.9996948"
+         x="537.65356"
+         id="image4739"
+         preserveAspectRatio="none"
+         height="118.21419"
+         width="118.2142" />
+      <image
+         sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_3_ORTC[0,0].png"
+         xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_3_ORTC[0,0].png"
+         y="4.9996948"
+         x="139.3855"
+         id="image4750"
+         preserveAspectRatio="none"
+         height="118.21419"
+         width="118.2142" />
+      <image
+         sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_3_ORTC[-0.1,0.1].png"
+         xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_3_ORTC[-0.1,0.1].png"
+         y="4.9996948"
+         x="404.89758"
+         id="image4761"
+         preserveAspectRatio="none"
+         height="118.21419"
+         width="118.2142" />
+      <image
+         sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_3_ORTC[-0.1,-0.1].png"
+         xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_3_ORTC[-0.1,-0.1].png"
+         y="4.9996948"
+         x="272.14151"
+         id="image4772"
+         preserveAspectRatio="none"
+         height="118.21419"
+         width="118.2142" />
+    </g>
+    <g
+       id="g4858"
+       transform="matrix(0.82383616,0,0,0.82383616,86.77382,-61.949572)">
+      <image
+         sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_1_ORTC[0.1,0.1].png"
+         xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_1_ORTC[0.1,0.1].png"
+         y="419.68369"
+         x="14.666544"
+         id="image4450-4"
+         preserveAspectRatio="none"
+         height="118.2142"
+         width="118.2142" />
+      <image
+         sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_1_ORTC[0.1,-0.1].png"
+         xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_1_ORTC[0.1,-0.1].png"
+         y="419.68369"
+         x="545.69067"
+         id="image4461-6"
+         preserveAspectRatio="none"
+         height="118.2142"
+         width="118.2142" />
+      <image
+         sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_1_ORTC[0,0].png"
+         xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_1_ORTC[0,0].png"
+         y="419.68369"
+         x="412.93472"
+         id="image4472-6"
+         preserveAspectRatio="none"
+         height="118.2142"
+         width="118.2142" />
+      <image
+         sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_1_ORTC[-0.1,0.1].png"
+         xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_1_ORTC[-0.1,0.1].png"
+         y="419.68369"
+         x="280.17865"
+         id="image4483-8"
+         preserveAspectRatio="none"
+         height="118.2142"
+         width="118.2142" />
+      <image
+         sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_1_ORTC[-0.1,-0.1].png"
+         xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_1_ORTC[-0.1,-0.1].png"
+         y="419.68369"
+         x="147.42261"
+         id="image4494-1"
+         preserveAspectRatio="none"
+         height="118.2142"
+         width="118.2142" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.75px;line-height:0%;font-family:Serif;-inkscape-font-specification:Serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="63.428566"
+       y="20.933853"
+       id="text4879"
+       sodipodi:linespacing="0%"><tspan
+         sodipodi:role="line"
+         id="tspan4881"
+         x="63.428566"
+         y="20.933853"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Sans;-inkscape-font-specification:'Sans Bold'">A1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.75px;line-height:0%;font-family:Serif;-inkscape-font-specification:Serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="63.36142"
+       y="112.96861"
+       id="text4879-5"
+       sodipodi:linespacing="0%"><tspan
+         sodipodi:role="line"
+         id="tspan4881-3"
+         x="63.36142"
+         y="112.96861"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Sans;-inkscape-font-specification:'Sans Bold'">A2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.75px;line-height:0%;font-family:Serif;-inkscape-font-specification:Serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="65.229759"
+       y="204.82207"
+       id="text4879-2"
+       sodipodi:linespacing="0%"><tspan
+         sodipodi:role="line"
+         id="tspan4881-9"
+         x="65.229759"
+         y="204.82207"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Sans;-inkscape-font-specification:'Sans Bold'">A3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.75px;line-height:0%;font-family:Serif;-inkscape-font-specification:Serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="64.913467"
+       y="296.49423"
+       id="text4879-2-8"
+       sodipodi:linespacing="0%"><tspan
+         sodipodi:role="line"
+         id="tspan4881-9-0"
+         x="64.913467"
+         y="296.49423"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Sans;-inkscape-font-specification:'Sans Bold'">A4</tspan></text>
+    <g
+       id="g4244"
+       transform="matrix(0.82383616,0,0,0.82383616,97.063811,-54.187799)">
+      <image
+         sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_1_ORTC[0.1,0.1].png"
+         xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig3_3_ORTC[0.1,0.1].png"
+         y="747.01636"
+         x="2.1762249"
+         id="image4450-46"
+         preserveAspectRatio="none"
+         height="118.2142"
+         width="118.2142" />
+      <image
+         sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_1_ORTC[0.1,-0.1].png"
+         xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig3_3_ORTC[0.1,-0.1].png"
+         y="747.01636"
+         x="533.20032"
+         id="image4461-1"
+         preserveAspectRatio="none"
+         height="118.2142"
+         width="118.2142" />
+      <image
+         sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_1_ORTC[0,0].png"
+         xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig3_3_ORTC[0,0].png"
+         y="747.01636"
+         x="400.44437"
+         id="image4472-1"
+         preserveAspectRatio="none"
+         height="118.2142"
+         width="118.2142" />
+      <image
+         sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_1_ORTC[-0.1,0.1].png"
+         xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig3_3_ORTC[-0.1,0.1].png"
+         y="747.01636"
+         x="267.68829"
+         id="image4483-4"
+         preserveAspectRatio="none"
+         height="118.2142"
+         width="118.2142" />
+      <image
+         sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_1_ORTC[-0.1,-0.1].png"
+         xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig3_3_ORTC[-0.1,-0.1].png"
+         y="747.01636"
+         x="134.93228"
+         id="image4494-7"
+         preserveAspectRatio="none"
+         height="118.2142"
+         width="118.2142" />
+    </g>
+    <g
+       id="g4237"
+       transform="matrix(0.82383616,0,0,0.82383616,97.652269,-44.321069)">
+      <image
+         sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_2_ORTC[0.1,0.1].png"
+         xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig3_2_ORTC[0.1,0.1].png"
+         y="622.78839"
+         x="532.48602"
+         id="image4572-7"
+         preserveAspectRatio="none"
+         height="118.21419"
+         width="118.2142" />
+      <image
+         sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_2_ORTC[0.1,-0.1].png"
+         xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig3_2_ORTC[0.1,-0.1].png"
+         y="622.78839"
+         x="399.73007"
+         id="image4583-2"
+         preserveAspectRatio="none"
+         height="118.21419"
+         width="118.2142" />
+      <image
+         sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_2_ORTC[0,0].png"
+         xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig3_2_ORTC[0,0].png"
+         y="622.78839"
+         x="266.974"
+         id="image4594-3"
+         preserveAspectRatio="none"
+         height="118.21419"
+         width="118.2142" />
+      <image
+         sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_2_ORTC[-0.1,0.1].png"
+         xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig3_2_ORTC[-0.1,0.1].png"
+         y="622.78839"
+         x="1.4619399"
+         id="image4605-4"
+         preserveAspectRatio="none"
+         height="118.21419"
+         width="118.2142" />
+      <image
+         sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_2_ORTC[-0.1,-0.1].png"
+         xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig3_2_ORTC[-0.1,-0.1].png"
+         y="622.78839"
+         x="134.218"
+         id="image4616-3"
+         preserveAspectRatio="none"
+         height="118.21419"
+         width="118.2142" />
+    </g>
+    <g
+       id="g4230"
+       transform="matrix(0.82383616,0,0,0.82383616,97.652269,-34.454227)">
+      <image
+         sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_3_ORTC[0.1,0.1].png"
+         xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig3_1_ORTC[0.1,0.1].png"
+         y="498.56036"
+         x="1.4619399"
+         id="image4728-2"
+         preserveAspectRatio="none"
+         height="118.21419"
+         width="118.2142" />
+      <image
+         sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_3_ORTC[0.1,-0.1].png"
+         xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig3_1_ORTC[0.1,-0.1].png"
+         y="498.56036"
+         x="532.48602"
+         id="image4739-8"
+         preserveAspectRatio="none"
+         height="118.21419"
+         width="118.2142" />
+      <image
+         sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_3_ORTC[0,0].png"
+         xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig3_1_ORTC[0,0].png"
+         y="498.56036"
+         x="134.218"
+         id="image4750-4"
+         preserveAspectRatio="none"
+         height="118.21419"
+         width="118.2142" />
+      <image
+         sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_3_ORTC[-0.1,0.1].png"
+         xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig3_1_ORTC[-0.1,0.1].png"
+         y="498.56036"
+         x="399.73007"
+         id="image4761-1"
+         preserveAspectRatio="none"
+         height="118.21419"
+         width="118.2142" />
+      <image
+         sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig2_3_ORTC[-0.1,-0.1].png"
+         xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig3_1_ORTC[-0.1,-0.1].png"
+         y="498.56036"
+         x="266.974"
+         id="image4772-1"
+         preserveAspectRatio="none"
+         height="118.21419"
+         width="118.2142" />
+    </g>
+    <g
+       id="g4325"
+       transform="matrix(0.82383616,0,0,0.82383616,73.643919,-110.12738)">
+      <image
+         sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig4_1_ORTC[0.1,0.1].png"
+         xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig4_3_ORTC[0.1,0.1].png"
+         y="1151.6719"
+         x="30.604074"
+         id="image4450-5"
+         preserveAspectRatio="none"
+         height="118.2142"
+         width="118.2142" />
+      <image
+         sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig4_1_ORTC[0.1,-0.1].png"
+         xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig4_3_ORTC[0.1,-0.1].png"
+         y="1151.6719"
+         x="561.62817"
+         id="image4461-5"
+         preserveAspectRatio="none"
+         height="118.2142"
+         width="118.2142" />
+      <image
+         sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig4_1_ORTC[0,0].png"
+         xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig4_3_ORTC[0,0].png"
+         y="1151.6719"
+         x="428.87222"
+         id="image4472-7"
+         preserveAspectRatio="none"
+         height="118.2142"
+         width="118.2142" />
+      <image
+         sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig4_1_ORTC[-0.1,0.1].png"
+         xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig4_3_ORTC[-0.1,0.1].png"
+         y="1151.6719"
+         x="296.11615"
+         id="image4483-9"
+         preserveAspectRatio="none"
+         height="118.2142"
+         width="118.2142" />
+      <image
+         sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig4_1_ORTC[-0.1,-0.1].png"
+         xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig4_3_ORTC[-0.1,-0.1].png"
+         y="1151.6719"
+         x="163.36014"
+         id="image4494-9"
+         preserveAspectRatio="none"
+         height="118.2142"
+         width="118.2142" />
+    </g>
+    <g
+       id="g4318"
+       transform="matrix(0.82383616,0,0,0.82383616,74.232375,-100.26059)">
+      <image
+         sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig4_2_ORTC[0.1,0.1].png"
+         xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig4_2_ORTC[0.1,0.1].png"
+         y="1027.4438"
+         x="560.91388"
+         id="image4572-5"
+         preserveAspectRatio="none"
+         height="118.21419"
+         width="118.2142" />
+      <image
+         sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig4_2_ORTC[0.1,-0.1].png"
+         xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig4_2_ORTC[0.1,-0.1].png"
+         y="1027.4438"
+         x="428.15793"
+         id="image4583-6"
+         preserveAspectRatio="none"
+         height="118.21419"
+         width="118.2142" />
+      <image
+         sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig4_2_ORTC[0,0].png"
+         xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig4_2_ORTC[0,0].png"
+         y="1027.4438"
+         x="295.40186"
+         id="image4594-9"
+         preserveAspectRatio="none"
+         height="118.21419"
+         width="118.2142" />
+      <image
+         sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig4_2_ORTC[-0.1,0.1].png"
+         xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig4_2_ORTC[-0.1,0.1].png"
+         y="1027.4438"
+         x="29.88979"
+         id="image4605-9"
+         preserveAspectRatio="none"
+         height="118.21419"
+         width="118.2142" />
+      <image
+         sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig4_2_ORTC[-0.1,-0.1].png"
+         xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig4_2_ORTC[-0.1,-0.1].png"
+         y="1027.4438"
+         x="162.64586"
+         id="image4616-2"
+         preserveAspectRatio="none"
+         height="118.21419"
+         width="118.2142" />
+    </g>
+    <g
+       id="g4311"
+       transform="matrix(0.82383616,0,0,0.82383616,74.232375,-90.393779)">
+      <image
+         sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig4_3_ORTC[0.1,0.1].png"
+         xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig4_1_ORTC[0.1,0.1].png"
+         y="903.21582"
+         x="29.88979"
+         id="image4728-3"
+         preserveAspectRatio="none"
+         height="118.21419"
+         width="118.2142" />
+      <image
+         sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig4_3_ORTC[0.1,-0.1].png"
+         xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig4_1_ORTC[0.1,-0.1].png"
+         y="903.21582"
+         x="560.91388"
+         id="image4739-3"
+         preserveAspectRatio="none"
+         height="118.21419"
+         width="118.2142" />
+      <image
+         sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig4_3_ORTC[0,0].png"
+         xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig4_1_ORTC[0,0].png"
+         y="903.21582"
+         x="162.64586"
+         id="image4750-8"
+         preserveAspectRatio="none"
+         height="118.21419"
+         width="118.2142" />
+      <image
+         sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig4_3_ORTC[-0.1,0.1].png"
+         xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig4_1_ORTC[-0.1,0.1].png"
+         y="903.21582"
+         x="428.15793"
+         id="image4761-0"
+         preserveAspectRatio="none"
+         height="118.21419"
+         width="118.2142" />
+      <image
+         sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig4_3_ORTC[-0.1,-0.1].png"
+         xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig4_1_ORTC[-0.1,-0.1].png"
+         y="903.21582"
+         x="295.40186"
+         id="image4772-0"
+         preserveAspectRatio="none"
+         height="118.21419"
+         width="118.2142" />
+    </g>
+    <image
+       width="97.389137"
+       height="97.389137"
+       preserveAspectRatio="none"
+       id="image4450-4-0"
+       x="98.856659"
+       y="931.13831"
+       xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig4_4_ORTC[0.1,0.1].png"
+       sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig4_1_ORTC[0.1,0.1].png" />
+    <image
+       width="97.389137"
+       height="97.389137"
+       preserveAspectRatio="none"
+       id="image4461-6-5"
+       x="536.3335"
+       y="931.13831"
+       xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig4_4_ORTC[0.1,-0.1].png"
+       sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig4_1_ORTC[0.1,-0.1].png" />
+    <image
+       width="97.389137"
+       height="97.389137"
+       preserveAspectRatio="none"
+       id="image4472-6-4"
+       x="426.96439"
+       y="931.13831"
+       xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig4_4_ORTC[0,0].png"
+       sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig4_1_ORTC[0,0].png" />
+    <image
+       width="97.389137"
+       height="97.389137"
+       preserveAspectRatio="none"
+       id="image4483-8-5"
+       x="317.59512"
+       y="931.13831"
+       xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig4_4_ORTC[-0.1,0.1].png"
+       sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig4_1_ORTC[-0.1,0.1].png" />
+    <image
+       width="97.389137"
+       height="97.389137"
+       preserveAspectRatio="none"
+       id="image4494-1-9"
+       x="208.22592"
+       y="931.13831"
+       xlink:href="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig4_4_ORTC[-0.1,-0.1].png"
+       sodipodi:absref="/home/jan/Doc/Papers/fast_inh_paper/CODE/fig4_1_ORTC[-0.1,-0.1].png" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.75px;line-height:0%;font-family:Serif;-inkscape-font-specification:Serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="68.043518"
+       y="388.34769"
+       id="text4879-9"
+       sodipodi:linespacing="0%"><tspan
+         sodipodi:role="line"
+         id="tspan4881-6"
+         x="68.043518"
+         y="388.34769"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Sans;-inkscape-font-specification:'Sans Bold'">B1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.75px;line-height:0%;font-family:Serif;-inkscape-font-specification:Serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="67.976372"
+       y="480.38235"
+       id="text4879-5-5"
+       sodipodi:linespacing="0%"><tspan
+         sodipodi:role="line"
+         id="tspan4881-3-6"
+         x="67.976372"
+         y="480.38235"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Sans;-inkscape-font-specification:'Sans Bold'">B2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.75px;line-height:0%;font-family:Serif;-inkscape-font-specification:Serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="69.844711"
+       y="572.23584"
+       id="text4879-2-6"
+       sodipodi:linespacing="0%"><tspan
+         sodipodi:role="line"
+         id="tspan4881-9-6"
+         x="69.844711"
+         y="572.23584"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Sans;-inkscape-font-specification:'Sans Bold'">B3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.75px;line-height:0%;font-family:Serif;-inkscape-font-specification:Serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="69.528419"
+       y="663.90796"
+       id="text4879-2-8-7"
+       sodipodi:linespacing="0%"><tspan
+         sodipodi:role="line"
+         id="tspan4881-9-0-1"
+         x="69.528419"
+         y="663.90796"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Sans;-inkscape-font-specification:'Sans Bold'">C1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.75px;line-height:0%;font-family:Serif;-inkscape-font-specification:Serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="69.472092"
+       y="755.76147"
+       id="text4879-9-2"
+       sodipodi:linespacing="0%"><tspan
+         sodipodi:role="line"
+         id="tspan4881-6-6"
+         x="69.472092"
+         y="755.76147"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Sans;-inkscape-font-specification:'Sans Bold'">C2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.75px;line-height:0%;font-family:Serif;-inkscape-font-specification:Serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="69.404945"
+       y="847.79614"
+       id="text4879-5-5-2"
+       sodipodi:linespacing="0%"><tspan
+         sodipodi:role="line"
+         id="tspan4881-3-6-6"
+         x="69.404945"
+         y="847.79614"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Sans;-inkscape-font-specification:'Sans Bold'">C3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.75px;line-height:0%;font-family:Serif;-inkscape-font-specification:Serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="69.252983"
+       y="939.6496"
+       id="text4879-2-6-9"
+       sodipodi:linespacing="0%"><tspan
+         sodipodi:role="line"
+         id="tspan4881-9-6-5"
+         x="69.252983"
+         y="939.6496"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Sans;-inkscape-font-specification:'Sans Bold'">C4</tspan></text>
+  </g>
+</svg>
